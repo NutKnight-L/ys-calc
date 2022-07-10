@@ -21,6 +21,9 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        #cha_lv {
+            width: 200px;
+        }
     </style>
 </head>
 <body>
@@ -79,7 +82,12 @@
                 </select>
             </tr>
             <tr>
-                <td>均显示满级属性</td>
+                <td>20/40/50/60/70/80级</td>
+                <td>默认为已突破</td>
+            </tr>
+            <tr>
+                <td>输入角色等级(1~90):</td>
+                <td><input type="number" id="cha_lv" min="1" max="90" value="1"></td>
             </tr>
             <tr>
                 <td>角色生命值</td>

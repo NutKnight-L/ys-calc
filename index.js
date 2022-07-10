@@ -25,6 +25,7 @@ var lm5 = [
 //alert(lm5[89]);
 
 //突破乘数
+//20 40 50 60 70 80
 var am = [0.208791209, 0.357142857, 0.554945055, 0.703296703, 0.851648352, 1];
 
 //Basic multiplier 角色数值基础乘数和最大加数
@@ -85,29 +86,150 @@ var options = myselect.options;
 var life = document.getElementById('cha_life');
 var atk = document.getElementById('cha_atk');
 var def = document.getElementById('cha_def');
+var lv = document.getElementById('cha_lv');
 //btn.onclick = myclick;
 function myclick(){
     var index = myselect.selectedIndex;
     var selectedText = options[index].value;
+    var mylv = lv.value;
     //alert(selectedText);
     if(bm[selectedText][6] == 5){
-        life.value = (bm[selectedText][0]*lm5[89] + bm[selectedText][3]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            life.value = (bm[selectedText][0]*lm5[mylv-1]).toFixed(2);
+        }
     }
     if(bm[selectedText][6] == 4){
-        life.value = (bm[selectedText][0]*lm4[89] + bm[selectedText][3]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            life.value = (bm[selectedText][0]*lm4[mylv-1] + bm[selectedText][3]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            life.value = (bm[selectedText][0]*lm4[mylv-1]).toFixed(2);
+        }
     }
     if(bm[selectedText][6] == 5){
-        atk.value = (bm[selectedText][1]*lm5[89] + bm[selectedText][4]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1] + bm[selectedText][4]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            atk.value = (bm[selectedText][1]*lm5[mylv-1]).toFixed(2);
+        }
     }
     if(bm[selectedText][6] == 4){
-        atk.value = (bm[selectedText][1]*lm4[89] + bm[selectedText][4]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1] + bm[selectedText][4]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            atk.value = (bm[selectedText][1]*lm4[mylv-1]).toFixed(2);
+        }
     }
     if(bm[selectedText][6] == 5){
-        def.value = (bm[selectedText][2]*lm5[89] + bm[selectedText][5]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            def.value = (bm[selectedText][2]*lm5[mylv-1] + bm[selectedText][5]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            def.value = (bm[selectedText][2]*lm5[mylv-1]).toFixed(2);
+        }
     }
     if(bm[selectedText][6] == 4){
-        def.value = (bm[selectedText][2]*lm4[89] + bm[selectedText][5]*am[5]).toFixed(2);
+        if(mylv >= 80){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[5]).toFixed(2);
+        }
+        if(mylv >= 70 && mylv < 80){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[4]).toFixed(2);
+        }
+        if(mylv >= 60 && mylv < 70){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[3]).toFixed(2);
+        }
+        if(mylv >= 50 && mylv < 60){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[2]).toFixed(2);
+        }
+        if(mylv >= 40 && mylv < 50){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[1]).toFixed(2);
+        }
+        if(mylv >= 20 && mylv < 40){
+            def.value = (bm[selectedText][2]*lm4[mylv-1] + bm[selectedText][5]*am[0]).toFixed(2);
+        }
+        if(mylv < 20){
+            def.value = (bm[selectedText][2]*lm4[mylv-1]).toFixed(2);
+        }
     }
 }
-setInterval("myclick()",500);
-
+setInterval("myclick()",100);
