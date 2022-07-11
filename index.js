@@ -90,6 +90,12 @@ var life = document.getElementById('cha_life');
 var atk = document.getElementById('cha_atk');
 var def = document.getElementById('cha_def');
 var lv = document.getElementById('cha_lv');
+for(var i = 1; i <= 90; i++){
+    lv.add(new Option(i,i));
+    if(i == 20 || i == 40 || i == 50 || i == 60 || i == 70 || i == 80){
+        lv.add(new Option(i+"+",i+"+"));
+    }
+}
 //btn.onclick = myclick;
 function myclick(){
     var index = myselect.selectedIndex;
@@ -97,25 +103,43 @@ function myclick(){
     var mylv = lv.value;
     //alert(selectedText);
     if(bm[selectedText][6] == 5){
-        if(mylv >= 80){
+        if(mylv > 80){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[5]).toFixed(2);
         }
-        if(mylv >= 70 && mylv < 80){
+        if(mylv == "80+"){
+            life.value = (bm[selectedText][0]*lm5[79] + bm[selectedText][3]*am[5]).toFixed(2);
+        }
+        if(mylv > 70 && mylv <= 80){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[4]).toFixed(2);
         }
-        if(mylv >= 60 && mylv < 70){
+        if(mylv == "70+"){
+            life.value = (bm[selectedText][0]*lm5[69] + bm[selectedText][3]*am[4]).toFixed(2);
+        }
+        if(mylv > 60 && mylv <= 70){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[3]).toFixed(2);
         }
-        if(mylv >= 50 && mylv < 60){
+        if(mylv == "60+"){
+            life.value = (bm[selectedText][0]*lm5[59] + bm[selectedText][3]*am[3]).toFixed(2);
+        }
+        if(mylv > 50 && mylv <= 60){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[2]).toFixed(2);
         }
-        if(mylv >= 40 && mylv < 50){
+        if(mylv == "50+"){
+            life.value = (bm[selectedText][0]*lm5[49] + bm[selectedText][3]*am[2]).toFixed(2);
+        }
+        if(mylv > 40 && mylv <= 50){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[1]).toFixed(2);
         }
-        if(mylv >= 20 && mylv < 40){
+        if(mylv == "40+"){
+            life.value = (bm[selectedText][0]*lm5[39] + bm[selectedText][3]*am[1]).toFixed(2);
+        }
+        if(mylv > 20 && mylv <= 40){
             life.value = (bm[selectedText][0]*lm5[mylv-1] + bm[selectedText][3]*am[0]).toFixed(2);
         }
-        if(mylv < 20){
+        if(mylv == "20+"){
+            life.value = (bm[selectedText][0]*lm5[19] + bm[selectedText][3]*am[0]).toFixed(2);
+        }
+        if(mylv <= 20){
             life.value = (bm[selectedText][0]*lm5[mylv-1]).toFixed(2);
         }
     }

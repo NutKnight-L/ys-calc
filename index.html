@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>原神伤害计算</title>
-    <style>
-
-    </style>
 </head>
 <body>
     <div class="gongjiqu">
-        <table>
-            <tr>
-                <label for="cha-select">选择角色：</label>
-                <select id="cha-select">
-                    <option value="abeiduo">阿贝多</option>
-                    <option value="ailuoyi">埃洛伊</option>
-                    <option value="anbo">安柏</option>
-                    <option value="babala">芭芭拉</option>
-                    <option value="shenzi">八重神子</option>
-                    <option value="bannite">班尼特</option>
-                    <option value="beidou">北斗</option>
-                    <option value="chongyun">重云 </option>
-                    <option value="dadaliya">达达利亚</option>
-                    <option value="diaona">迪奥娜</option>
-                    <option value="diluke">迪卢克</option>
-                    <option value="feixieer">菲谢尔</option>
-                    <option value="wanye">枫原万叶</option>
-                    <option value="ganyu">甘雨</option>
-                    <option value="hutao">胡桃</option>
-                    <option value="yidou">荒泷一斗</option>
-                    <option value="jiuqiren">久崎忍</option>
-                    <option value="jiutiao">九条裟罗</option>
-                    <option value="kaiya">凯亚</option>
-                    <option value="keli">可莉</option>
-                    <option value="keqing">刻晴</option>
-                    <option value="leidianjiangjun">雷电将军</option>
-                    <option value="leize">雷泽</option>
-                    <option value="lisha">丽莎</option>
-                    <option value="luoshaliya">罗莎莉亚</option>
-                    <option value="lvxingzhe">旅行者</option>
-                    <option value="mona">莫娜</option>
-                    <option value="ningguang">凝光</option>
-                    <option value="nuoaier">诺艾尔</option>
-                    <option value="qiqi">七七</option>
-                    <option value="qin">琴</option>
-                    <option value="shatang">砂糖</option>
-                    <option value="xinhai">珊瑚宫心海</option>
-                    <option value="shenhe">申鹤</option>
-                    <option value="linghua">神里绫华</option>
-                    <option value="lingren">神里绫人</option>
-                    <option value="tuoma">托马</option>
-                    <option value="wendi">温迪</option>
-                    <option value="wulang">五郎</option>
-                    <option value="xiao">魈</option>
-                    <option value="xiaogong">宵宫</option>
-                    <option value="xiangling">香菱</option>
-                    <option value="xinyan">辛焱</option>
-                    <option value="xingqiu">行秋</option>
-                    <option value="yanfei">烟绯</option>
-                    <option value="yelan">夜兰</option>
-                    <option value="youla">优菈</option>
-                    <option value="yunjin">云堇</option>
-                    <option value="zaoyou">早柚</option>
-                    <option value="zhongli">钟离</option>
-                </select>
-            </tr>
-            <tr>
-                <td>20/40/50/60/70/80级</td>
-                <td>默认为已突破</td>
-            </tr>
-            <tr>
-                <td>输入角色等级(1~90):</td>
-                <td><input type="number" id="cha_lv" min="1" max="90" value="1"></td>
-            </tr>
-            <tr>
-                <td>角色生命值</td>
-                <td><input type="text" id="cha_life" value="" readonly></td>
-            </tr>
-            <tr>
-                <td>角色攻击力</td>
-                <td><input type="text" id="cha_atk" value="" readonly></td>
-            </tr>
-            <tr>
-                <td>角色防御力</td>
-                <td><input type="text" id="cha_def" value="" readonly></td>
-            </tr>
-        </table>
+        <span>选择角色</span>
+        <select id="cha-select">
+            <option value="abeiduo">阿贝多</option>
+            <option value="ailuoyi">埃洛伊</option>
+            <option value="anbo">安柏</option>
+            <option value="babala">芭芭拉</option>
+            <option value="shenzi">八重神子</option>
+            <option value="bannite">班尼特</option>
+            <option value="beidou">北斗</option>
+            <option value="chongyun">重云 </option>
+            <option value="dadaliya">达达利亚</option>
+            <option value="diaona">迪奥娜</option>
+            <option value="diluke">迪卢克</option>
+            <option value="feixieer">菲谢尔</option>
+            <option value="wanye">枫原万叶</option>
+            <option value="ganyu">甘雨</option>
+            <option value="hutao">胡桃</option>
+            <option value="yidou">荒泷一斗</option>
+            <option value="jiuqiren">久崎忍</option>
+            <option value="jiutiao">九条裟罗</option>
+            <option value="kaiya">凯亚</option>
+            <option value="keli">可莉</option>
+            <option value="keqing">刻晴</option>
+            <option value="leidianjiangjun">雷电将军</option>
+            <option value="leize">雷泽</option>
+            <option value="lisha">丽莎</option>
+            <option value="luoshaliya">罗莎莉亚</option>
+            <option value="lvxingzhe">旅行者</option>
+            <option value="mona">莫娜</option>
+            <option value="ningguang">凝光</option>
+            <option value="nuoaier">诺艾尔</option>
+            <option value="qiqi">七七</option>
+            <option value="qin">琴</option>
+            <option value="shatang">砂糖</option>
+            <option value="xinhai">珊瑚宫心海</option>
+            <option value="shenhe">申鹤</option>
+            <option value="linghua">神里绫华</option>
+            <option value="lingren">神里绫人</option>
+            <option value="tuoma">托马</option>
+            <option value="wendi">温迪</option>
+            <option value="wulang">五郎</option>
+            <option value="xiao">魈</option>
+            <option value="xiaogong">宵宫</option>
+            <option value="xiangling">香菱</option>
+            <option value="xinyan">辛焱</option>
+            <option value="xingqiu">行秋</option>
+            <option value="yanfei">烟绯</option>
+            <option value="yelan">夜兰</option>
+            <option value="youla">优菈</option>
+            <option value="yunjin">云堇</option>
+            <option value="zaoyou">早柚</option>
+            <option value="zhongli">钟离</option>
+        </select>
+        <span>角色等级</span>
+        <select name="" id="cha_lv">
+        </select><br>
+        <span>20+/40+/50+/60+/70+/80+表示已突破</span><br>
+        <span>角色生命值</span><input type="text" id="cha_life" value="" readonly><br>
+        <span>角色攻击力</span><input type="text" id="cha_atk" value="" readonly><br>
+        <span>角色防御力</span><input type="text" id="cha_def" value="" readonly>
     </div>
     <script src="index.js"></script>
 </body>
