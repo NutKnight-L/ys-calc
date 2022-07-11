@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <title>原神伤害计算</title>
 </head>
+
 <body>
     <div class="gongjiqu">
         <span>选择角色</span>
@@ -69,8 +70,22 @@
         <span>20+/40+/50+/60+/70+/80+表示已突破</span><br>
         <span>角色生命值</span><input type="text" id="cha_life" value="" readonly><br>
         <span>角色攻击力</span><input type="text" id="cha_atk" value="" readonly><br>
-        <span>角色防御力</span><input type="text" id="cha_def" value="" readonly>
+        <span>角色防御力</span><input type="text" id="cha_def" value="" readonly><br>
+        <span>武器类型</span>
+        <input type="radio" id="dsj" name="weapon" value="dsj" checked>
+        <label for="dsj">单手剑</label>
+        <input type="radio" id="ssj" name="weapon" value="ssj">
+        <label for="ssj">双手剑</label>
+        <input type="radio" id="fq" name="weapon" value="fq">
+        <label for="fq">法器</label>
+        <input type="radio" id="bow" name="weapon" value="bow">
+        <label for="bow">弓</label>
+        <input type="radio" id="cq" name="weapon" value="cq">
+        <label for="cq">长柄武器</label>
+        <select name="" id="wep_select">
+        </select>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
