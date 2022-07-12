@@ -1,12 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 span {
     margin: 5px;
 }
 .gongjiqu {
-    width: 400px;
+    border: 1px solid black;
 }
 #wep_select {
     width: 80px;
