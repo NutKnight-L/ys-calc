@@ -1,29 +1,3 @@
-//four star level multiplier 四星角色等级乘数
-var lm4 = [
-    1.000, 1.083, 1.165, 1.248, 1.330, 1.413, 1.495, 1.578, 1.661, 1.743,
-    1.826, 1.908, 1.991, 2.073, 2.156, 2.239, 2.321, 2.404, 2.486, 2.569,
-    2.651, 2.734, 2.817, 2.899, 2.982, 3.064, 3.147, 3.229, 3.312, 3.394,
-    3.477, 3.560, 3.642, 3.725, 3.807, 3.890, 3.972, 4.055, 4.138, 4.220,
-    4.303, 4.385, 4.468, 4.550, 4.633, 4.716, 4.798, 4.881, 4.963, 5.046,
-    5.128, 5.211, 5.294, 5.376, 5.459, 5.541, 5.624, 5.706, 5.789, 5.872,
-    5.954, 6.037, 6.119, 6.202, 6.284, 6.367, 6.450, 6.532, 6.615, 6.697,
-    6.780, 6.862, 6.945, 7.028, 7.110, 7.193, 7.275, 7.358, 7.440, 7.523,
-    7.606, 7.688, 7.771, 7.853, 7.936, 8.018, 8.101, 8.183, 8.266, 8.349
-];
-//five star star level multiplier 五星角色等级乘数
-var lm5 = [
-    1.000, 1.083, 1.166, 1.250, 1.333, 1.417, 1.500, 1.584, 1.668, 1.751,
-    1.835, 1.919, 2.003, 2.088, 2.172, 2.256, 2.341, 2.425, 2.510, 2.594,
-    2.679, 2.764, 2.849, 2.934, 3.019, 3.105, 3.190, 3.275, 3.361, 3.446,
-    3.532, 3.618, 3.704, 3.789, 3.875, 3.962, 4.048, 4.134, 4.220, 4.307,
-    4.393, 4.480, 4.567, 4.653, 4.740, 4.827, 4.914, 5.001, 5.089, 5.176,
-    5.263, 5.351, 5.438, 5.526, 5.614, 5.702, 5.790, 5.878, 5.966, 6.054,
-    6.142, 6.230, 6.319, 6.407, 6.496, 6.585, 6.673, 6.762, 6.851, 6.940,
-    7.029, 7.119, 7.208, 7.297, 7.387, 7.476, 7.566, 7.656, 7.746, 7.836,
-    7.926, 8.016, 8.106, 8.196, 8.286, 8.377, 8.467, 8.558, 8.649, 8.739
-];
-//alert(lm5[89]);
-
 //突破乘数
 //20 40 50 60 70 80
 var am = [0.208791209, 0.357142857, 0.554945055, 0.703296703, 0.851648352, 1];
@@ -84,184 +58,125 @@ var bm = {
     lingren: [1067.7, 23.3, 59.8, 4384.6, 95.6, 245.7, 5],
     jiuqiren: [1030.3, 17.8, 62.9, 3686.5, 63.7, 225.2, 4]
 }
-var myselect = document.getElementById('cha-select');
-var options = myselect.options;
+//获取元素
+var chaslt = document.getElementById('cha-select');
+var options = chaslt.options;
 var life = document.getElementById('cha_life');
 var atk = document.getElementById('cha_atk');
 var def = document.getElementById('cha_def');
 var lv = document.getElementById('cha_lv');
+var cfm = document.getElementById('confirmed');
+var tcfm = document.getElementById('textforckb');
 //添加options
 for (var i = 1; i <= 90; i++) {
     lv.add(new Option(i, i));
-    if (i == 20 || i == 40 || i == 50 || i == 60 || i == 70 || i == 80) {
-        lv.add(new Option(i + "+", i + "+"));
+}
+//添加监听事件
+cfm.addEventListener("change", tocfm); 
+lv.addEventListener("change", toResult);
+chaslt.addEventListener("change", toResult);
+//判断是否突破
+function tocfm() {
+    if (cfm.checked) {
+        // console.log("已勾选");
+        toResult();
+    }
+    else {
+        // console.log("已取消勾选");
+        toResult();
     }
 }
-//btn.onclick = myclick;
-function myclick() {
-    var index = myselect.selectedIndex;
+//计算生命值，攻击力，防御力
+function toResult() {
+    var index = chaslt.selectedIndex;
     var selectedText = options[index].value;
     var mylv = lv.value;
-    //alert(selectedText);
-    if (bm[selectedText][6] == 5) {
-        if (mylv > 80) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[5]).toFixed(2);
-        }
-        if (mylv == "80+") {
-            life.value = (bm[selectedText][0] * lm5[79] + bm[selectedText][3] * am[5]).toFixed(2);
-        }
-        if (mylv > 70 && mylv <= 80) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[4]).toFixed(2);
-        }
-        if (mylv == "70+") {
-            life.value = (bm[selectedText][0] * lm5[69] + bm[selectedText][3] * am[4]).toFixed(2);
-        }
-        if (mylv > 60 && mylv <= 70) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[3]).toFixed(2);
-        }
-        if (mylv == "60+") {
-            life.value = (bm[selectedText][0] * lm5[59] + bm[selectedText][3] * am[3]).toFixed(2);
-        }
-        if (mylv > 50 && mylv <= 60) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[2]).toFixed(2);
-        }
-        if (mylv == "50+") {
-            life.value = (bm[selectedText][0] * lm5[49] + bm[selectedText][3] * am[2]).toFixed(2);
-        }
-        if (mylv > 40 && mylv <= 50) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[1]).toFixed(2);
-        }
-        if (mylv == "40+") {
-            life.value = (bm[selectedText][0] * lm5[39] + bm[selectedText][3] * am[1]).toFixed(2);
-        }
-        if (mylv > 20 && mylv <= 40) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1] + bm[selectedText][3] * am[0]).toFixed(2);
-        }
-        if (mylv == "20+") {
-            life.value = (bm[selectedText][0] * lm5[19] + bm[selectedText][3] * am[0]).toFixed(2);
-        }
-        if (mylv <= 20) {
-            life.value = (bm[selectedText][0] * lm5[mylv - 1]).toFixed(2);
-        }
+    // console.log(selectedText);
+    if (mylv == 20 || mylv == 40 || mylv == 50 || mylv == 60 || mylv == 70 || mylv == 80) {
+        cfm.style.display = "inline";
+        tcfm.style.display = "inline";
     }
-    if (bm[selectedText][6] == 4) {
-        if (mylv >= 80) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[5]).toFixed(2);
-        }
-        if (mylv >= 70 && mylv < 80) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[4]).toFixed(2);
-        }
-        if (mylv >= 60 && mylv < 70) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[3]).toFixed(2);
-        }
-        if (mylv >= 50 && mylv < 60) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[2]).toFixed(2);
-        }
-        if (mylv >= 40 && mylv < 50) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[1]).toFixed(2);
-        }
-        if (mylv >= 20 && mylv < 40) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1] + bm[selectedText][3] * am[0]).toFixed(2);
-        }
-        if (mylv < 20) {
-            life.value = (bm[selectedText][0] * lm4[mylv - 1]).toFixed(2);
-        }
+    else {
+        cfm.style.display = "none";
+        tcfm.style.display = "none";
     }
-    if (bm[selectedText][6] == 5) {
-        if (mylv >= 80) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[5]).toFixed(2);
-        }
-        if (mylv >= 70 && mylv < 80) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[4]).toFixed(2);
-        }
-        if (mylv >= 60 && mylv < 70) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[3]).toFixed(2);
-        }
-        if (mylv >= 50 && mylv < 60) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[2]).toFixed(2);
-        }
-        if (mylv >= 40 && mylv < 50) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[1]).toFixed(2);
-        }
-        if (mylv >= 20 && mylv < 40) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1] + bm[selectedText][4] * am[0]).toFixed(2);
-        }
-        if (mylv < 20) {
-            atk.value = (bm[selectedText][1] * lm5[mylv - 1]).toFixed(2);
-        }
-    }
-    if (bm[selectedText][6] == 4) {
-        if (mylv >= 80) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[5]).toFixed(2);
-        }
-        if (mylv >= 70 && mylv < 80) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[4]).toFixed(2);
-        }
-        if (mylv >= 60 && mylv < 70) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[3]).toFixed(2);
-        }
-        if (mylv >= 50 && mylv < 60) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[2]).toFixed(2);
-        }
-        if (mylv >= 40 && mylv < 50) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[1]).toFixed(2);
-        }
-        if (mylv >= 20 && mylv < 40) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1] + bm[selectedText][4] * am[0]).toFixed(2);
-        }
-        if (mylv < 20) {
-            atk.value = (bm[selectedText][1] * lm4[mylv - 1]).toFixed(2);
-        }
-    }
-    if (bm[selectedText][6] == 5) {
-        if (mylv >= 80) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[5]).toFixed(2);
-        }
-        if (mylv >= 70 && mylv < 80) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[4]).toFixed(2);
-        }
-        if (mylv >= 60 && mylv < 70) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[3]).toFixed(2);
-        }
-        if (mylv >= 50 && mylv < 60) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[2]).toFixed(2);
-        }
-        if (mylv >= 40 && mylv < 50) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[1]).toFixed(2);
-        }
-        if (mylv >= 20 && mylv < 40) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1] + bm[selectedText][5] * am[0]).toFixed(2);
-        }
-        if (mylv < 20) {
-            def.value = (bm[selectedText][2] * lm5[mylv - 1]).toFixed(2);
-        }
-    }
-    if (bm[selectedText][6] == 4) {
-        if (mylv >= 80) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[5]).toFixed(2);
-        }
-        if (mylv >= 70 && mylv < 80) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[4]).toFixed(2);
-        }
-        if (mylv >= 60 && mylv < 70) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[3]).toFixed(2);
-        }
-        if (mylv >= 50 && mylv < 60) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[2]).toFixed(2);
-        }
-        if (mylv >= 40 && mylv < 50) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[1]).toFixed(2);
-        }
-        if (mylv >= 20 && mylv < 40) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1] + bm[selectedText][5] * am[0]).toFixed(2);
-        }
-        if (mylv < 20) {
-            def.value = (bm[selectedText][2] * lm4[mylv - 1]).toFixed(2);
+    for (var i = 0; i < chac.Character.length; i++) {
+        // console.log(i);
+        if (selectedText == chac.Character[i].name) {
+            console.log(lm());
+            var lvm = slmp[chac.Character[i].star][mylv - 1];
+            life.value = (chac.Character[i].Bhp * lvm + chac.Character[i].Mhp * lm()).toFixed(2);
+            atk.value = (chac.Character[i].Batk * lvm + chac.Character[i].Matk * lm()).toFixed(2);
+            def.value = (chac.Character[i].Bdef * lvm + chac.Character[i].Mdef * lm()).toFixed(2);
         }
     }
 }
-setInterval("myclick()", 100);
+//判断突破等级
+function lm() {
+    var myam;
+    var mylv = lv.value;
+    if (mylv < 20) {
+        myam = 0;
+    }
+    if (mylv > 20 && mylv < 40) {
+        myam = am[0];
+    }
+    if (mylv > 40 && mylv < 50) {
+        myam = am[1];
+    }
+    if (mylv > 50 && mylv < 60) {
+        myam = am[2];
+    }
+    if (mylv > 60 && mylv < 70) {
+        myam = am[3];
+    }
+    if (mylv > 70 && mylv < 80) {
+        myam = am[4];
+    }
+    if (mylv > 80 && mylv <= 90) {
+        myam = am[5];
+    }
+    if (mylv == 20) {
+        if (cfm.checked) {
+            myam = am[0];
+        }
+        else myam = 0;
+    }
+    if (mylv == 40) {
+        if (cfm.checked) {
+            myam = am[1];
+        }
+        else myam = am[0];
+    }
+    if (mylv == 50) {
+        if (cfm.checked) {
+            myam = am[2];
+        }
+        else myam = am[1];
+    }
+    if (mylv == 60) {
+        if (cfm.checked) {
+            myam = am[3];
+        }
+        else myam = am[2];
+    }
+    if (mylv == 70) {
+        if (cfm.checked) {
+            myam = am[4];
+        }
+        else myam = am[3];
+    }
+    if (mylv == 80) {
+        if (cfm.checked) {
+            myam = am[5];
+        }
+        else myam = am[4];
+    }
+    return myam;
+}
+
 var weps = document.getElementsByName('weapon');
+var wepup = document.getElementsByName('wep_up');
 var mywepselect = document.getElementById('wep_select');
 var wepdsj = ["单手剑1", "单手剑2", "单手剑3", "单手剑4", "单手剑5", "单手剑6"];
 var wepssj = ["双手剑1", "双手剑2", "双手剑3", "双手剑4", "双手剑5"];
@@ -271,6 +186,12 @@ var wepcq = ["长枪1", "长枪2", "长枪3", "长枪4", "长枪5"];
 //给radio添加监听器
 for (var a = 0; a < weps.length; a++) {
     weps[a].addEventListener("click", choweps);
+}
+for (var a = 0; a < wepup.length; a++) {
+    wepup[a].addEventListener("click", calcWep);
+}
+function calcWep() {
+    console.log(chac.abeiduo);
 }
 choweps();
 //改变下拉菜单

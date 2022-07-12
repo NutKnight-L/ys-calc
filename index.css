@@ -8,3 +8,12 @@ span {
 .gongjiqu {
     width: 400px;
 }
+#wep_select {
+    width: 80px;
+}
+#confirmed {
+    display: none;
+}
+#textforckb {
+    display: none;
+}
