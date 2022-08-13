@@ -1,5 +1,6 @@
-var datas = [
+var AvatarData = [
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "神里绫华",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -76,6 +77,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "琴",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -152,6 +154,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "旅行者",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -235,6 +238,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "丽莎",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -311,6 +315,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "芭芭拉",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -389,6 +394,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "凯亚",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -465,6 +471,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "迪卢克",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -541,6 +548,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "雷泽",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -617,6 +625,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "安柏",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -694,6 +703,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "温迪",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -771,6 +781,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "香菱",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -847,6 +858,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "北斗",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -925,6 +937,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "行秋",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -1001,6 +1014,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "魈",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -1077,6 +1091,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "凝光",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -1155,6 +1170,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "可莉",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LOLI",
@@ -1231,6 +1247,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "钟离",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -1307,6 +1324,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "菲谢尔",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -1384,6 +1402,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "班尼特",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -1462,6 +1481,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "达达利亚",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -1539,6 +1559,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "诺艾尔",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -1617,6 +1638,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "七七",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LOLI",
@@ -1693,6 +1715,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "重云",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -1771,6 +1794,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "甘雨",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -1848,6 +1872,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "阿贝多",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -1924,6 +1949,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "迪奥娜",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LOLI",
@@ -2003,6 +2029,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "莫娜",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2079,6 +2106,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "刻晴",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2155,6 +2183,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "砂糖",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2231,6 +2260,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "辛焱",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2307,6 +2337,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "罗莎莉亚",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -2383,6 +2414,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "胡桃",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2459,6 +2491,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "枫原万叶",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -2535,6 +2568,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "烟绯",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2611,6 +2645,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "宵宫",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -2688,6 +2723,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "FIRE",
         "ChineseName": "托马",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -2766,6 +2802,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "优菈",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -2842,6 +2879,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "雷电将军",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -2918,6 +2956,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "早柚",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LOLI",
@@ -2996,6 +3035,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "珊瑚宫心海",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -3072,6 +3112,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "五郎",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -3151,6 +3192,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "九条裟罗",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -3228,6 +3270,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "荒泷一斗",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",
@@ -3304,6 +3347,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "八重神子",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -3380,6 +3424,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WIND",
         "ChineseName": "鹿野院平藏",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_BOY",
@@ -3458,6 +3503,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "夜兰",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -3535,6 +3581,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "埃洛伊",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -3612,6 +3659,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ICE",
         "ChineseName": "申鹤",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_LADY",
@@ -3688,6 +3736,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "ROCK",
         "ChineseName": "云堇",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -3766,6 +3815,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "THUNDER",
         "ChineseName": "久崎忍",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_GIRL",
@@ -3844,6 +3894,7 @@ var datas = [
         "LODPatternName": ""
     },
     {
+        "ElementAttribute": "WATER",
         "ChineseName": "神里绫人",
         "useType": "AVATAR_FORMAL",
         "bodyType": "BODY_MALE",

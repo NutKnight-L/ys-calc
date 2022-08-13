@@ -1,64 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>原神伤害计算</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Genshin Impact Calc</title>
 </head>
 
 <body>
-    <div class="gongjiqu">
-        <span>选择角色</span>
-        <select id="cha-select">
-        </select>
-        <span>角色等级</span>
-        <select name="" id="cha_lv">
-        </select>
-        <input type="checkbox" name="" id="confirmed">
-        <label id="textforckb" for="confirmed">是否突破</label><br>
-        <!-- <span>20+/40+/50+/60+/70+/80+表示已突破</span><br> -->
-        <span>角色生命值</span><input type="text" id="cha_life" value="" readonly><br>
-        <span>角色攻击力</span><input type="text" id="cha_atk" value="" readonly><br>
-        <span>角色防御力</span><input type="text" id="cha_def" value="" readonly><br>
-        <span>武器类型</span>
-        <input type="radio" id="dsj" name="weapon" value="dsj" checked>
-        <label for="dsj">单手剑</label>
-        <input type="radio" id="ssj" name="weapon" value="ssj">
-        <label for="ssj">双手剑</label>
-        <input type="radio" id="fq" name="weapon" value="fq">
-        <label for="fq">法器</label>
-        <input type="radio" id="bow" name="weapon" value="bow">
-        <label for="bow">弓</label>
-        <input type="radio" id="cq" name="weapon" value="cq">
-        <label for="cq">长柄武器</label>
-        <select name="" id="wep_select">
-        </select>
-        <br>
-        <span>精炼等级</span>
-        <input type="radio" name="wep_up" id="up1" checked>
-        <label for="up1">1</label>
-        <input type="radio" name="wep_up" id="up2">
-        <label for="up2">2</label>
-        <input type="radio" name="wep_up" id="up3">
-        <label for="up3">3</label>
-        <input type="radio" name="wep_up" id="up4">
-        <label for="up4">4</label>
-        <input type="radio" name="wep_up" id="up5">
-        <label for="up5">5</label>
-        <br>
-        <span>武器攻击力</span><input type="text" name="" id="wep_main" readonly><br>
-        <span>武器副词缀</span><input type="text" name="" id="wep_main" readonly><br>
-        <span>武器特效</span>
-        <input type="button" id="btn1" value="ok">
+    <button id="btn" class="btn">Test</button>
+    <div class="main">
+        <div class="weplist">
+            <ul id="wepList">
+            </ul>
+        </div>
     </div>
-    <script src="AvatarData.js"></script>
-    <script src="AvatarPromoteData.js"></script>
-    <script src="index.js"></script>
-    <script src="info.js"></script>
-    
+
+
+    <div class="weaponShowBox">
+        <div class="moduleB">
+            <span>无锋剑</span>
+        </div>
+        <div class="moduleC">
+            <span>单手剑</span>
+        </div>
+        <div class="moduleA">
+            <span>基础攻击力</span>
+            <span>23</span>
+        </div>
+        <div class="moduleA">
+            <span>副词条</span>
+            <span>None</span>
+        </div>
+        <div class="moduleD">
+            <img src="img/Icon_Sword.png">
+        </div>
+        <div class="moduleE">
+        </div>
+    </div>
+
+
+
+
+    <script src="js/zWep.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

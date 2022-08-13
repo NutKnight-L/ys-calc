@@ -1,4 +1,4 @@
-var prodatas = [
+var AvatarPromoteData = [
     {
         "avatarPromoteId": 2,
         "promoteAudio": "",
