@@ -7,6 +7,11 @@ window.onload = function () {
     let mC = document.getElementsByClassName('moduleC');
     let mD = document.getElementsByClassName('moduleD');
     let mE = document.getElementsByClassName('moduleE');
+    let wepSiftChoose = document.getElementsByClassName('wepSiftChoose');
+    let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
+    // let wepSiftList = document.getElementsByClassName('siftListHidden');
+    let wepSiftList = [listChoose[1], listChoose[3]];
+    console.log(wepSiftList);
 
     for (let i = 0; i < zWep.length; i++) {
         let nli = document.createElement('li');
@@ -66,17 +71,55 @@ window.onload = function () {
         return mE[0].getElementsByTagName('i').length;
     }
 
-    btn.onclick = function () {
-        //测试用
-        let nnn = getPresentStar();
-        mE[0].getElementsByTagName('i')[nnn - 1].className = "fa-solid fa-star clearStar";
-        setTimeout(function () {
-            mE[0].getElementsByTagName('i')[nnn - 1].parentNode.removeChild(mE[0].getElementsByTagName('i')[nnn - 1]);
-        }, 100);
-
-
-
+    //筛选
+    for (let i = 0; i < wepSiftChoose.length; i++) {
+        wepSiftChoose[i].onclick = wepSift;
     }
+    for (let i = 0; i < 5; i++) {
+        wepSiftList[0].getElementsByTagName('li')[i].onclick = wepSift;
+    }
+    //筛选列表开关
+    function wepSift() {
+        for (let i = 0; i < 2; i++) {
+            if (wepSiftChoose[i] === this) {
+                switch (wepSiftList[i].className) {
+                    case "siftListHidden":
+                        wepSiftList[i].className = "wepListA";
+                        break;
+                    case "wepListA":
+                        wepSiftList[i].className = "siftListHidden";
+                        break;
+                }
+            }
+        }
+    }
+    /* btn.onclick = function () {
+        //测试用
+        let count = 0;
+        let oneStar = 0;
+        let twoStar = 0;
+        let threeStar = 0;
+        let fourStar = 0;
+        let fiveStar = 0;
+        let i = 0;
+        while (i < zWep.length) {
+            if (zWep[i]["weaponType"] == "长柄武器") {
+                count++;
+                console.log(zWep[i]);
+                if (zWep[i]["rankLevel"] == 1) oneStar++;
+                if (zWep[i]["rankLevel"] == 2) twoStar++;
+                if (zWep[i]["rankLevel"] == 3) threeStar++;
+                if (zWep[i]["rankLevel"] == 4) fourStar++;
+                if (zWep[i]["rankLevel"] == 5) fiveStar++;
+            }
+            i++;
+        }
+        console.log(count, oneStar, twoStar, threeStar, fourStar, fiveStar);
+
+
+
+    } */
+    //动态修改星级
     function q(n1, n2) {
         setTimeout(function () {
             if (n1 == n2) {
@@ -94,6 +137,7 @@ window.onload = function () {
         }, 100
         );
     }
+    //添加星星图标
     function nI() {
         setTimeout(function () {
             let nI = document.createElement('i');
@@ -101,6 +145,7 @@ window.onload = function () {
             mE[0].appendChild(nI);
         }, 0);
     }
+    //清除星星图标
     function clearStar(nnn) {
         // let nnn = getPresentStar();
         mE[0].getElementsByTagName('i')[nnn - 1].className = "fa-solid fa-star clearStar";

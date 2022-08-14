@@ -295,7 +295,7 @@ var zWep = [
             }
         ]
     },
-    {
+    /* {
         "weaponName": "降临之剑",
         "weaponType": "单手剑",
         "rankLevel": 4,
@@ -311,7 +311,7 @@ var zWep = [
                 "propType": "攻击力百分比"
             }
         ]
-    },
+    }, */
     {
         "weaponName": "腐殖之剑",
         "weaponType": "单手剑",
@@ -574,7 +574,7 @@ var zWep = [
             }
         ]
     },
-    {
+    /* {
         "weaponName": "石英大剑",
         "weaponType": "双手剑",
         "rankLevel": 3,
@@ -590,7 +590,7 @@ var zWep = [
                 "propType": "元素精通"
             }
         ]
-    },
+    }, */
     {
         "weaponName": "以理服人",
         "weaponType": "双手剑",
@@ -1023,7 +1023,7 @@ var zWep = [
             }
         ]
     },
-    {
+    /* {
         "weaponName": "「旗杆」",
         "weaponType": "长柄武器",
         "rankLevel": 3,
@@ -1039,7 +1039,7 @@ var zWep = [
                 "propType": "undefined"
             }
         ]
-    },
+    }, */
     {
         "weaponName": "匣里灭辰",
         "weaponType": "长柄武器",
@@ -1455,7 +1455,7 @@ var zWep = [
             }
         ]
     },
-    {
+    /* {
         "weaponName": "琥珀玥",
         "weaponType": "法器",
         "rankLevel": 3,
@@ -1471,7 +1471,7 @@ var zWep = [
                 "propType": "元素精通"
             }
         ]
-    },
+    }, */
     {
         "weaponName": "西风秘典",
         "weaponType": "法器",
@@ -1904,7 +1904,7 @@ var zWep = [
             }
         ]
     },
-    {
+    /* {
         "weaponName": "黑檀弓",
         "weaponType": "弓",
         "rankLevel": 3,
@@ -1920,7 +1920,7 @@ var zWep = [
                 "propType": "攻击力百分比"
             }
         ]
-    },
+    }, */
     {
         "weaponName": "西风猎弓",
         "weaponType": "弓",
