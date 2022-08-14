@@ -10,8 +10,8 @@ window.onload = function () {
     let mE = document.getElementsByClassName('moduleE');
     let wepSiftChoose = document.getElementsByClassName('wepSiftChoose');
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
-    // let wepSiftList = document.getElementsByClassName('siftListHidden');
     let wepSiftList = [listChoose[1], listChoose[3]];
+    let lvRangeBtn = document.getElementById('weplevel');
 
     addNewLi(siftWType(), siftWRank());
 
@@ -158,7 +158,7 @@ window.onload = function () {
             }
         }
     }
-    btn1.onclick = function () {
+    /* btn1.onclick = function () {
         //测试用
         // console.log(siftWType(), siftWRank());
         addNewLi(siftWType(), siftWRank());
@@ -166,7 +166,7 @@ window.onload = function () {
     btn2.onclick = function () {
         //测试用
         delList();
-    }
+    } */
     function delList() {
         for (let i = wList.children.length; i >= 1; i--) {
             wList.children[i - 1].remove();
@@ -238,5 +238,11 @@ window.onload = function () {
         setTimeout(function () {
             mE[0].getElementsByTagName('i')[nnn - 1].parentNode.removeChild(mE[0].getElementsByTagName('i')[nnn - 1]);
         }, 100);
+    }
+    //等级滑块
+    lvRangeBtn.oninput = rangeCreateLv;
+    function rangeCreateLv() {
+        lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent =
+            "Lv." + lvRangeBtn.value;
     }
 }
