@@ -1,7 +1,8 @@
 window.onload = function () {
     //获取dom元素
     const wList = document.getElementById('wepList');
-    const btn = document.getElementById('btn'); //测试按钮
+    const btn1 = document.getElementById('btn1'); //测试按钮
+    const btn2 = document.getElementById('btn2'); //测试按钮
     let mB = document.getElementsByClassName('moduleB');
     let mA = document.getElementsByClassName('moduleA');
     let mC = document.getElementsByClassName('moduleC');
@@ -12,7 +13,7 @@ window.onload = function () {
     // let wepSiftList = document.getElementsByClassName('siftListHidden');
     let wepSiftList = [listChoose[1], listChoose[3]];
 
-    addNewLi();
+    addNewLi(siftWType(), siftWRank());
 
     q(getPresentStar(), zWep[0]["rankLevel"]);
     wList.addEventListener("click", function (e) {
@@ -78,32 +79,57 @@ window.onload = function () {
     //选中li事件 /* 用this的问题 */
     function liChecked() {
         this.className = "liChecked";
-        // addNewLi(this.textContent);
-        console.log(this.textContent);
         for (let i = 0; i < 5; i++) {
             if (this.parentNode.getElementsByTagName('li')[i].textContent != this.textContent) {
                 this.parentNode.getElementsByTagName('li')[i].className = "liUnChecked";
             }
         }
+        addNewLi(siftWType(), siftWRank());
     }
-    function addNewLi(type1) {
-        for (let i = 0; i < zWep.length; i++) {
-            switch (type1) {
-                case "1":
-                    // wList.remove();
-                    if (zWep[i]["rankLevel"] == type1) {
+    function addNewLi(WsiftType, WsiftRank) {
+        delList();
+        if (WsiftType == false && WsiftRank == false) {
+            for (let i = 0; i < zWep.length; i++) {
+                let nli = document.createElement('li');
+                nli.textContent = zWep[i]["weaponName"];
+                wList.appendChild(nli);
+            }
+        }
+        if (WsiftRank != false && WsiftType != false) {
+            for (let i = 0; i < zWep.length; i++) {
+                if (zWep[i]["rankLevel"] == WsiftRank) {
+                    if (zWep[i]["weaponType"] == WsiftType) {
                         let nli = document.createElement('li');
                         nli.textContent = zWep[i]["weaponName"];
                         wList.appendChild(nli);
                     }
-                    break;
-                default:
+                }
+                /* if (zWep[i]["weaponType"] == WsiftType) {
+                    if (zWep[i]["rankLevel"] == WsiftRank) {
+                        let nli = document.createElement('li');
+                        nli.textContent = zWep[i]["weaponName"];
+                        wList.appendChild(nli);
+                    }
+                } */
+            }
+        }
+        if (WsiftType != false && WsiftRank == false) {
+            for (let i = 0; i < zWep.length; i++) {
+                if (zWep[i]["weaponType"] == WsiftType) {
                     let nli = document.createElement('li');
                     nli.textContent = zWep[i]["weaponName"];
                     wList.appendChild(nli);
-                    break;
+                }
             }
-
+        }
+        if (WsiftRank != false && WsiftType == false) {
+            for (let i = 0; i < zWep.length; i++) {
+                if (zWep[i]["rankLevel"] == WsiftRank) {
+                    let nli = document.createElement('li');
+                    nli.textContent = zWep[i]["weaponName"];
+                    wList.appendChild(nli);
+                }
+            }
         }
     }
 
@@ -124,32 +150,53 @@ window.onload = function () {
             }
         }
     }
-    /* btn.onclick = function () {
+    btn1.onclick = function () {
         //测试用
-        let count = 0;
-        let oneStar = 0;
-        let twoStar = 0;
-        let threeStar = 0;
-        let fourStar = 0;
-        let fiveStar = 0;
-        let i = 0;
-        while (i < zWep.length) {
-            if (zWep[i]["weaponType"] == "长柄武器") {
-                count++;
-                console.log(zWep[i]);
-                if (zWep[i]["rankLevel"] == 1) oneStar++;
-                if (zWep[i]["rankLevel"] == 2) twoStar++;
-                if (zWep[i]["rankLevel"] == 3) threeStar++;
-                if (zWep[i]["rankLevel"] == 4) fourStar++;
-                if (zWep[i]["rankLevel"] == 5) fiveStar++;
-            }
-            i++;
+        // console.log(siftWType(), siftWRank());
+        addNewLi(siftWType(), siftWRank());
+    }
+    btn2.onclick = function () {
+        //测试用
+        delList();
+    }
+    function delList() {
+        for (let i = wList.children.length; i >= 1; i--) {
+            wList.children[i - 1].remove();
         }
-        console.log(count, oneStar, twoStar, threeStar, fourStar, fiveStar);
+    }
+    function siftWType() {
+        let wTypelist = document.getElementById("wTypelist");
+        let isChecked = false;
+        let backString;
+        for (let i = 0; i < 5; i++) {
+            if (wTypelist.getElementsByTagName('li')[i].className == "liChecked") {
+                isChecked = true;
+                backString = wTypelist.getElementsByTagName('li')[i].textContent;
+            }
+        }
+        if (isChecked) {
+            return backString;
+        } else {
+            return isChecked;
+        }
 
-
-
-    } */
+    }
+    function siftWRank() {
+        let wRanklist = document.getElementById("wRanklist");
+        let isChecked = false;
+        let backString;
+        for (let i = 0; i < 5; i++) {
+            if (wRanklist.getElementsByTagName('li')[i].className == "liChecked") {
+                isChecked = true;
+                backString = Number(wRanklist.getElementsByTagName('li')[i].textContent);
+            }
+        }
+        if (isChecked) {
+            return backString;
+        } else {
+            return isChecked;
+        }
+    }
     //动态修改星级
     function q(n1, n2) {
         setTimeout(function () {
