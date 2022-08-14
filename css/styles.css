@@ -271,6 +271,16 @@ li {
     display: block;
 }
 
+.wepListA li {
+    height: 4vh;
+    line-height: 4vh;
+}
+
+.liChecked {
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
 .siftListHidden {
     display: none;
 }
@@ -278,4 +288,9 @@ li {
 .wepSiftChoose {
     cursor: pointer;
     text-align: center;
+}
+
+.wepSiftChoose span {
+    height: 4vh;
+    line-height: 4vh;
 }
