@@ -114,9 +114,11 @@ window.onload = function () {
                 switch (wepSiftList[i].className) {
                     case "siftListHidden":
                         wepSiftList[i].className = "wepListA";
+                        wepSiftChoose[i].getElementsByTagName('i')[0].className = "fa-solid fa-angle-down arrowUp";
                         break;
                     case "wepListA":
                         wepSiftList[i].className = "siftListHidden";
+                        wepSiftChoose[i].getElementsByTagName('i')[0].className = "fa-solid fa-angle-down";
                         break;
                 }
             }
