@@ -10,6 +10,7 @@
     --animationTime_dot5s: .5s;
     --animationTime_dot8s: .8s;
     --animationTime_dot2s: .2s;
+    --animationTime_dot3s: .3s;
     --weplistWidth: 200px;
 }
 
@@ -72,7 +73,7 @@ li {
     height: 6vh;
     line-height: 6vh;
     width: 100%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: bold;
 }
@@ -277,8 +278,25 @@ li {
 }
 
 .liChecked {
+    font-size: 90%;
+    color: rgb(255, 255, 255);
+    transform: scale(.9) translateX(30px);
     font-weight: bold;
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.7);
+    ;
+    text-align: center;
+    transition: all .2s;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    width: 90%;
+    box-shadow: 1px 1px 5px rgb(93, 93, 93);
+}
+
+.liUnChecked {
+    color: rgb(158, 158, 158);
+    transform: scale(0.88);
+    text-align: center;
+    transition: all .2s;
 }
 
 .siftListHidden {
@@ -293,4 +311,5 @@ li {
 .wepSiftChoose span {
     height: 4vh;
     line-height: 4vh;
+    font-size: 16px;
 }

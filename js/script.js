@@ -11,7 +11,6 @@ window.onload = function () {
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
     // let wepSiftList = document.getElementsByClassName('siftListHidden');
     let wepSiftList = [listChoose[1], listChoose[3]];
-    console.log(wepSiftList);
 
     for (let i = 0; i < zWep.length; i++) {
         let nli = document.createElement('li');
@@ -76,7 +75,17 @@ window.onload = function () {
         wepSiftChoose[i].onclick = wepSift;
     }
     for (let i = 0; i < 5; i++) {
-        wepSiftList[0].getElementsByTagName('li')[i].onclick = wepSift;
+        wepSiftList[0].getElementsByTagName('li')[i].onclick = liChecked;
+        wepSiftList[1].getElementsByTagName('li')[i].onclick = liChecked;
+    }
+    //选中li事件 /* 用this的问题 */
+    function liChecked() {
+        this.className = "liChecked";
+        for (let i = 0; i < 5; i++) {
+            if (this.parentNode.getElementsByTagName('li')[i].textContent != this.textContent) {
+                this.parentNode.getElementsByTagName('li')[i].className = "liUnChecked";
+            }
+        }
     }
     //筛选列表开关
     function wepSift() {
