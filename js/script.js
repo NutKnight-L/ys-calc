@@ -20,7 +20,11 @@ window.onload = function () {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
                 mD[0].innerHTML = "<img src=" + getType(zWep[i]["weaponType"]) + ">";
-                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + zWep[i]["weaponProp"][0]["initValue"].toFixed(0) + "</span>"
+
+
+                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + zWep[i]["weaponProp"][0]["initValue"].toFixed(0) + "</span>";
+
+
                 mB[0].innerHTML = "<span>" + zWep[i]['weaponName'] + "</span>";
                 mC[0].innerHTML = "<span>" + zWep[i]["weaponType"] + "</span>";
                 q(getPresentStar(), zWep[i]["rankLevel"]);
@@ -35,6 +39,10 @@ window.onload = function () {
                                 + "<span>" + (zWep[i]["weaponProp"][1]["initValue"] * 100).toFixed(1) + "%" + "</span>";
                             break;
                     }
+                }
+                if (!zWep[i]["weaponProp"][1]) {
+                    mA[1].innerHTML = "<span>" + "没有副词条的" + "</span>"
+                        + "<span>" + "神圣武器" + "</span>";
                 }
 
             }
