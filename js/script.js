@@ -12,11 +12,8 @@ window.onload = function () {
     // let wepSiftList = document.getElementsByClassName('siftListHidden');
     let wepSiftList = [listChoose[1], listChoose[3]];
 
-    for (let i = 0; i < zWep.length; i++) {
-        let nli = document.createElement('li');
-        nli.textContent = zWep[i]["weaponName"];
-        wList.appendChild(nli);
-    }
+    addNewLi();
+
     q(getPresentStar(), zWep[0]["rankLevel"]);
     wList.addEventListener("click", function (e) {
         for (let i = 0; i < zWep.length; i++) {
@@ -81,12 +78,35 @@ window.onload = function () {
     //选中li事件 /* 用this的问题 */
     function liChecked() {
         this.className = "liChecked";
+        // addNewLi(this.textContent);
+        console.log(this.textContent);
         for (let i = 0; i < 5; i++) {
             if (this.parentNode.getElementsByTagName('li')[i].textContent != this.textContent) {
                 this.parentNode.getElementsByTagName('li')[i].className = "liUnChecked";
             }
         }
     }
+    function addNewLi(type1) {
+        for (let i = 0; i < zWep.length; i++) {
+            switch (type1) {
+                case "1":
+                    // wList.remove();
+                    if (zWep[i]["rankLevel"] == type1) {
+                        let nli = document.createElement('li');
+                        nli.textContent = zWep[i]["weaponName"];
+                        wList.appendChild(nli);
+                    }
+                    break;
+                default:
+                    let nli = document.createElement('li');
+                    nli.textContent = zWep[i]["weaponName"];
+                    wList.appendChild(nli);
+                    break;
+            }
+
+        }
+    }
+
     //筛选列表开关
     function wepSift() {
         for (let i = 0; i < 2; i++) {
