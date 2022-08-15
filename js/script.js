@@ -12,6 +12,8 @@ window.onload = function () {
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
     let wepSiftList = [listChoose[1], listChoose[3]];
     let lvRangeBtn = document.getElementById('weplevel');
+    let affixName = document.getElementsByClassName("affixName");
+    let affixText = document.getElementsByClassName("affixText");
 
     addNewLi(siftWType(), siftWRank());
 
@@ -29,6 +31,8 @@ window.onload = function () {
                 mC[0].innerHTML = "<span>" + zWep[i]["weaponType"] + "</span>";
                 q(getPresentStar(), zWep[i]["rankLevel"]);
                 if (zWep[i]["weaponProp"][1]) {
+                    affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
+                    affixText[0].innerHTML = "<span>" + zWep[i]["skillAffixText"] + "</span>";
                     switch (zWep[i]["weaponProp"][1]["propType"]) {
                         case "元素精通":
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"

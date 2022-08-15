@@ -30,7 +30,7 @@ li {
 
 .main {
     position: relative;
-    width: 80vw;
+    width: 90vw;
     height: 48vh;
     /* z-index: 1; */
     /* background-color: rebeccapurple; */
@@ -76,8 +76,8 @@ li {
 }
 
 .weaponShowBox {
-    width: 90vw;
-    height: 85vh;
+    width: 95vw;
+    height: 100vh;
     background-color: transparent;
     background-image: linear-gradient(135deg, var(--mainColor1), var(--mainColor2), var(--mainColor3));
     box-shadow: 0 0 10px #ccc;
@@ -291,6 +291,39 @@ li {
     }
 }
 
+/* 武器特效 */
+.affixName {
+    width: 88%;
+    /* height: 4vh; */
+    /* background-color: red; */
+
+}
+
+.affixName span {
+    width: 50%;
+    height: 4vh;
+    line-height: 4vh;
+    /* background-color: white; */
+    display: block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.affixText {
+    width: 88%;
+    /* height: 20vh; */
+    /* background-color: blue; */
+    margin-bottom: 1vh;
+
+}
+
+.affixText span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+
+}
 
 /* 星星icon添加 */
 .staricon {
