@@ -3,7 +3,7 @@ window.onload = function () {
     const wList = document.getElementById('wepList');
     const btn1 = document.getElementById('btn1'); //测试按钮
     const btn2 = document.getElementById('btn2'); //测试按钮
-    let mB = document.getElementsByClassName('moduleB');
+    let mB = document.getElementsByClassName('wName');
     let mA = document.getElementsByClassName('moduleA');
     let mC = document.getElementsByClassName('moduleC');
     let mD = document.getElementsByClassName('moduleD');
@@ -22,13 +22,11 @@ window.onload = function () {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
                 mD[0].innerHTML = "<img src=" + getType(zWep[i]["weaponType"]) + ">";
-
-
                 mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + zWep[i]["weaponProp"][0]["initValue"].toFixed(0) + "</span>";
-
-
                 mB[0].innerHTML = "<span>" + zWep[i]['weaponName'] + "</span>";
                 mC[0].innerHTML = "<span>" + zWep[i]["weaponType"] + "</span>";
+                affixName[0].innerHTML = "";
+                affixText[0].innerHTML = "";
                 q(getPresentStar(), zWep[i]["rankLevel"]);
                 if (zWep[i]["weaponProp"][1]) {
                     affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
