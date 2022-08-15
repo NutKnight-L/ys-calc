@@ -1,12 +1,13 @@
 window.onload = function () {
     //获取dom元素
-    const wList = document.getElementById('wepList');
+    const wepList = document.getElementById('wepList');
+    const wList = document.getElementById("wList");
     const btn1 = document.getElementById('btn1'); //测试按钮
     const btn2 = document.getElementById('btn2'); //测试按钮
     let mB = document.getElementsByClassName('wName');
     let mA = document.getElementsByClassName('moduleA');
-    let mC = document.getElementsByClassName('moduleC');
-    let mD = document.getElementsByClassName('moduleD');
+    let mC = document.getElementsByClassName('wType');
+    let mD = document.getElementsByClassName('wIcon');
     let mE = document.getElementsByClassName('moduleE');
     let wepSiftChoose = document.getElementsByClassName('wepSiftChoose');
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
@@ -14,11 +15,12 @@ window.onload = function () {
     let lvRangeBtn = document.getElementById('weplevel');
     let affixName = document.getElementsByClassName("affixName");
     let affixText = document.getElementsByClassName("affixText");
+    let showList = document.getElementById("showList");
 
     addNewLi(siftWType(), siftWRank());
 
     q(getPresentStar(), zWep[0]["rankLevel"]);
-    wList.addEventListener("click", function (e) {
+    wepList.addEventListener("click", function (e) {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
                 mD[0].innerHTML = "<img src=" + getType(zWep[i]["weaponType"]) + ">";
@@ -102,7 +104,7 @@ window.onload = function () {
             for (let i = 0; i < zWep.length; i++) {
                 let nli = document.createElement('li');
                 nli.textContent = zWep[i]["weaponName"];
-                wList.appendChild(nli);
+                wepList.appendChild(nli);
             }
         }
         if (WsiftRank != false && WsiftType != false) {
@@ -111,14 +113,14 @@ window.onload = function () {
                     if (zWep[i]["weaponType"] == WsiftType) {
                         let nli = document.createElement('li');
                         nli.textContent = zWep[i]["weaponName"];
-                        wList.appendChild(nli);
+                        wepList.appendChild(nli);
                     }
                 }
                 /* if (zWep[i]["weaponType"] == WsiftType) {
                     if (zWep[i]["rankLevel"] == WsiftRank) {
                         let nli = document.createElement('li');
                         nli.textContent = zWep[i]["weaponName"];
-                        wList.appendChild(nli);
+                        wepList.appendChild(nli);
                     }
                 } */
             }
@@ -128,7 +130,7 @@ window.onload = function () {
                 if (zWep[i]["weaponType"] == WsiftType) {
                     let nli = document.createElement('li');
                     nli.textContent = zWep[i]["weaponName"];
-                    wList.appendChild(nli);
+                    wepList.appendChild(nli);
                 }
             }
         }
@@ -137,7 +139,7 @@ window.onload = function () {
                 if (zWep[i]["rankLevel"] == WsiftRank) {
                     let nli = document.createElement('li');
                     nli.textContent = zWep[i]["weaponName"];
-                    wList.appendChild(nli);
+                    wepList.appendChild(nli);
                 }
             }
         }
@@ -170,8 +172,8 @@ window.onload = function () {
         delList();
     } */
     function delList() {
-        for (let i = wList.children.length; i >= 1; i--) {
-            wList.children[i - 1].remove();
+        for (let i = wepList.children.length; i >= 1; i--) {
+            wepList.children[i - 1].remove();
         }
     }
     function siftWType() {
@@ -189,7 +191,6 @@ window.onload = function () {
         } else {
             return isChecked;
         }
-
     }
     function siftWRank() {
         let wRanklist = document.getElementById("wRanklist");
@@ -246,5 +247,19 @@ window.onload = function () {
     function rangeCreateLv() {
         lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent =
             "Lv." + lvRangeBtn.value;
+    }
+    //侧边菜单
+    showList.onclick = function () {
+        console.log("clicked");
+        // console.log(ali.clientWidth, ali.clientHeight);
+        if (wList.className == "wList" && showList.className == "showList") {
+            wList.className = "wListHidden";
+            showList.className = "showListBack";
+        } else {
+            wList.className = "wList";
+            showList.className = "showList";
+        }
+
+
     }
 }

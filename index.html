@@ -21,10 +21,10 @@
                 <div class="wName">
                     <span>无锋剑</span>
                 </div>
-                <div class="moduleC">
+                <div class="wType">
                     <span>单手剑</span>
                 </div>
-                <div class="moduleD">
+                <div class="wIcon">
                     <img src="img/Icon_Sword.png">
                 </div>
             </div>
@@ -43,10 +43,14 @@
                 </div>
             </div>
             <div class="wInput">
-                <div class="wepLevel">
-                    <span>Lv.1</span>
-                    <input type="range" id="weplevel" max="90" min="1" step="1" value="1">
-                </div>
+                <span>Lv.1</span>
+                <input type="number" id="weplevel" max="90" min="1" step="1" value="1">
+                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i>
             </div>
             <div class="wAffix">
                 <div class="affixName">
@@ -54,40 +58,42 @@
                 <div class="affixText">
                 </div>
             </div>
-            <div class="wList">
-                <div class="main">
-                    <div class="listChoose">
-                        <div class="wepSiftChoose">
-                            <span>类型<i class="fa-solid fa-angle-down"></i></span>
-                        </div>
-                        <div class="siftListHidden">
-                            <ul id="wTypelist">
-                                <li>单手剑</li>
-                                <li>双手剑</li>
-                                <li>法器</li>
-                                <li>长柄武器</li>
-                                <li>弓</li>
-                            </ul>
-                        </div>
-                        <div class="wepSiftChoose">
-                            <span>星级<i class="fa-solid fa-angle-down"></i></span>
-                        </div>
-                        <div class="siftListHidden">
-                            <ul id="wRanklist">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="weplist">
-                        <ul id="wepList">
-                        </ul>
-                    </div>
+
+        </div>
+        <div class="wList" id="wList">
+            <div class="listChoose">
+                <div class="wepSiftChoose">
+                    <span>类型<i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div class="siftListHidden">
+                    <ul id="wTypelist">
+                        <li>单手剑</li>
+                        <li>双手剑</li>
+                        <li>法器</li>
+                        <li>长柄武器</li>
+                        <li>弓</li>
+                    </ul>
+                </div>
+                <div class="wepSiftChoose">
+                    <span>星级<i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div class="siftListHidden">
+                    <ul id="wRanklist">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
                 </div>
             </div>
+            <div class="weplist">
+                <ul id="wepList">
+                </ul>
+            </div>
+        </div>
+        <div class="showList" id="showList">
+            <i class="fa-solid fa-angles-right"></i>
         </div>
 
 
