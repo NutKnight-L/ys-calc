@@ -23,6 +23,11 @@ window.onload = function () {
     wepList.addEventListener("click", function (e) {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
+                let arrayLi = wepList.children;
+                for (let i = 0; i < arrayLi.length; i++) {
+                    arrayLi[i].className = "";
+                }
+                e.target.className = "liChecked";
                 mD[0].innerHTML = "<img src=" + getType(zWep[i]["weaponType"]) + ">";
                 mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + zWep[i]["weaponProp"][0]["initValue"].toFixed(0) + "</span>";
                 mB[0].innerHTML = "<span>" + zWep[i]['weaponName'] + "</span>";
@@ -32,7 +37,7 @@ window.onload = function () {
                 q(getPresentStar(), zWep[i]["rankLevel"]);
                 if (zWep[i]["weaponProp"][1]) {
                     affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
-                    affixText[0].innerHTML = "<span>•" + zWep[i]["skillAffixText"] + "</span>";
+                    affixText[0].innerHTML = "<span>• " + zWep[i]["skillAffixText"] + "</span>";
                     switch (zWep[i]["weaponProp"][1]["propType"]) {
                         case "元素精通":
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
