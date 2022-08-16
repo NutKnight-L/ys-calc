@@ -253,18 +253,22 @@
 .affixText {
     width: 100%;
     /* background-color: blue; */
-    text-indent: 2em;
+    text-indent: 1.6em;
+    padding-top: 1vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
 }
 
 .affixText span {
     color: #fff;
     /* font-weight: bold; */
     font-size: 14px;
+
 }
 
 .wList {
     width: 70%;
-    height: 50%;
+    height: 62%;
     background-color: rgb(30, 141, 210);
     position: fixed;
     top: 60%;
@@ -273,37 +277,43 @@
     transition: width .5s;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    box-shadow: 0 0 3px rgb(83, 83, 83);
+    overflow: hidden;
 }
 
 .wListHidden {
-    width: 5%;
-    height: 50%;
+    width: 4%;
+    height: 62%;
     position: fixed;
     background-color: rgb(30, 141, 210);
+    box-shadow: 0 0 3px rgb(83, 83, 83);
     top: 60%;
     transform: translateY(-50%);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: all .5s;
+    opacity: .5;
 }
 
-.wListHidden .weplist,
+.wListHidden .weplistbox,
 .wListHidden .listChoose {
     opacity: 0;
     transition: opacity .2s;
 }
 
-.weplist {
-    width: 90%;
-    height: 50%;
+.weplistbox {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(224, 36, 36); */
     overflow: auto;
 }
 
-.weplist li {
+
+.weplistbox li {
     width: 100%;
+    height: 2em;
+    line-height: 2.5em;
     background-color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: bold;
 }
 
 li {
@@ -314,9 +324,13 @@ li {
 
 
 .listChoose {
-    width: 90%;
+    width: 100%;
     height: min-content;
     background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "content content";
 }
 
 .showList {
@@ -333,22 +347,26 @@ li {
     align-items: center;
     justify-content: center;
     transition: all .5s;
+    box-shadow: 1px 0 0px rgb(107, 107, 107);
 }
 
 .showListBack {
-    width: 15%;
+    width: 12%;
     height: 100px;
     background-color: rgb(30, 141, 210);
+    /* background-color: rgb(255, 255, 255); */
     position: fixed;
     top: 60%;
-    left: 5%;
+    left: 0%;
     transform: translateY(-50%);
     border-bottom-right-radius: 2vh;
     border-top-right-radius: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 0 0px rgb(107, 107, 107);
     transition: all .5s;
+    opacity: .3;
 }
 
 .showList i {
@@ -410,15 +428,17 @@ li {
 }
 
 .wepListA {
+    width: 100%;
     display: block;
     color: rgb(158, 158, 158);
-    /* animation: heightShow .4s; */
+    animation: heightShow .4s;
+    /* background-color: rgb(129, 129, 129); */
 }
 
 .siftListHidden {
     color: rgb(158, 158, 158);
     height: 0;
-    /* animation: heightBack .4s; */
+    animation: heightBack .4s;
     opacity: 0;
     overflow: hidden;
 
@@ -430,15 +450,14 @@ li {
 }
 
 .liChecked {
-    width: 90%;
-    font-size: 90%;
-    font-weight: bold;
+    width: 100%;
+    /* font-size: 90%; */
     color: #fff;
-    padding-right: 10px;
-    transform: translateX(20px);
-    border-top-right-radius: 4vh;
+    /* padding-right: 10px; */
+    /* transform: translateX(20px); */
+    /* border-top-right-radius: 4vh; */
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 0px 2px rgb(93, 93, 93);
+    box-shadow: 0px -2px 5px rgb(93, 93, 93);
     transition: all var(--animationTime_dot3s);
 }
 

@@ -11,7 +11,7 @@ window.onload = function () {
     let mE = document.getElementsByClassName('moduleE');
     let wepSiftChoose = document.getElementsByClassName('wepSiftChoose');
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
-    let wepSiftList = [listChoose[1], listChoose[3]];
+    let wepSiftList = [listChoose[2], listChoose[3]];
     let lvRangeBtn = document.getElementById('weplevel');
     let affixName = document.getElementsByClassName("affixName");
     let affixText = document.getElementsByClassName("affixText");
@@ -32,7 +32,7 @@ window.onload = function () {
                 q(getPresentStar(), zWep[i]["rankLevel"]);
                 if (zWep[i]["weaponProp"][1]) {
                     affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
-                    affixText[0].innerHTML = "<span>" + zWep[i]["skillAffixText"] + "</span>";
+                    affixText[0].innerHTML = "<span>•" + zWep[i]["skillAffixText"] + "</span>";
                     switch (zWep[i]["weaponProp"][1]["propType"]) {
                         case "元素精通":
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
@@ -148,7 +148,7 @@ window.onload = function () {
     //筛选列表开关
     function wepSift() {
         for (let i = 0; i < 2; i++) {
-            if (wepSiftChoose[i] === this) {
+            if (wepSiftChoose[i]) {
                 switch (wepSiftList[i].className) {
                     case "siftListHidden":
                         wepSiftList[i].className = "wepListA";
@@ -250,7 +250,7 @@ window.onload = function () {
     }
     //侧边菜单
     showList.onclick = function () {
-        console.log("clicked");
+        // console.log("clicked");
         // console.log(ali.clientWidth, ali.clientHeight);
         if (wList.className == "wList" && showList.className == "showList") {
             wList.className = "wListHidden";
