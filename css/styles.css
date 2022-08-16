@@ -483,6 +483,7 @@ li {
 .wepSiftChoose {
     cursor: pointer;
     text-align: center;
+    border-bottom: 1px solid black;
 }
 
 .wepSiftChoose span {
