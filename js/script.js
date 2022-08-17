@@ -27,6 +27,12 @@ window.onload = function () {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
 
+                if ((zWep[i]["rankLevel"] == 1 || zWep[i]["rankLevel"] == 2) && lvRangeBtn.value > 70) {
+                    alert("该武器等级上限为70级！");
+                    lvRangeBtn.value = 70;
+                    storeNum = 70;
+                    lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + 70;
+                }
                 //获取列表长度
                 let arrayLi = wepList.children;
 
@@ -290,12 +296,44 @@ window.onload = function () {
     }
     //等级滑块
     lvRangeBtn.oninput = rangeCreateLv;
+    lvRangeBtn.onblur = isLoseFocus;
+    lvRangeBtn.onfocus = clearInput;
+    let storeNum = 0;
+    function clearInput() {
+        storeNum = lvRangeBtn.value;
+        lvRangeBtn.value = '';
+    }
+
+    function isLoseFocus() {
+        lvRangeBtn.value = storeNum;
+    }
     function rangeCreateLv() {
+        storeNum = lvRangeBtn.value;
         lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + lvRangeBtn.value;
+        if (lvRangeBtn.value == 0) {
+            alert("请输入1-90的等级");
+            lvRangeBtn.value = 1;
+            storeNum = 1;
+            lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + 1;
+        }
         for (let i = 0; i < zWep.length; i++) {
             if (zWep[i]["weaponName"] == mB[0].textContent) {
                 //写入武器主词条和对应数值
                 let preLevel = lvRangeBtn.value;//获取当前等级
+                if (preLevel > 70 && (zWep[i]["rankLevel"] == 1 || zWep[i]["rankLevel"] == 2)) {
+                    alert("该武器等级上限为70级！");
+                    lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + 70;
+                    lvRangeBtn.value = 70;
+                    preLevel = 70;
+                    storeNum = 70;
+                }
+                if (preLevel > 90 && (zWep[i]["rankLevel"] == 3 || zWep[i]["rankLevel"] == 4 || zWep[i]["rankLevel"] == 5)) {
+                    lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + 90;
+                    lvRangeBtn.value = 90;
+                    alert("该武器等级上限为90级！");
+                    preLevel = 90;
+                    storeNum = 90;
+                }
                 let propMainType = zWep[i]["weaponProp"][0]["type"];//获取武器成长主词条类型
                 let mainFirstValue = zWep[i]["weaponProp"][0]["initValue"];//获取武器初始主词条
                 let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
