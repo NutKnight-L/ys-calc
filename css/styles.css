@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     /* 文字不可选中 */
 }
 
@@ -130,7 +130,7 @@
     box-shadow: 0 0 10px rgb(100, 100, 100);
     left: 50%;
     transform: translate(-50%, -50%);
-    /* animation: bbb var(--animationTime_dot8s); */
+    animation: bbb var(--animationTime_dot3s);
 }
 
 .wValue {
@@ -363,6 +363,7 @@ li {
     justify-content: center;
     transition: all .5s;
     box-shadow: 1px 0 0px rgb(107, 107, 107);
+    cursor: pointer;
 }
 
 .showListBack {
@@ -382,6 +383,7 @@ li {
     box-shadow: 1px 0 0px rgb(107, 107, 107);
     transition: all .5s;
     opacity: .3;
+    cursor: pointer;
 }
 
 .showList i {
@@ -510,11 +512,11 @@ li {
 
 @keyframes bbb {
     0% {
-        width: 150%;
+        opacity: 0;
     }
 
     100% {
-        width: 90%;
+        opacity: 1;
     }
 }
 

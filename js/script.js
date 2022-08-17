@@ -16,39 +16,73 @@ window.onload = function () {
     let affixName = document.getElementsByClassName("affixName");
     let affixText = document.getElementsByClassName("affixText");
     let showList = document.getElementById("showList");
+    let propBtn = document.getElementById('isPropBtn');
 
     addNewLi(siftWType(), siftWRank());
 
+
     q(getPresentStar(), zWep[0]["rankLevel"]);
+
     wepList.addEventListener("click", function (e) {
         for (let i = 0; i < zWep.length; i++) {
             if (e.target.textContent == zWep[i]["weaponName"]) {
+
+                //获取列表长度
                 let arrayLi = wepList.children;
+
+                //清空列表样式
                 for (let i = 0; i < arrayLi.length; i++) {
                     arrayLi[i].className = "";
                 }
+                //设置列表选中样式
                 e.target.className = "liChecked";
+
+                //载入武器类型图片
                 mD[0].innerHTML = "<img src=" + getType(zWep[i]["weaponType"]) + ">";
-                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + zWep[i]["weaponProp"][0]["initValue"].toFixed(0) + "</span>";
+
+                //写入武器主词条和对应数值
+                let preLevel = lvRangeBtn.value;//获取当前等级
+                let propMainType = zWep[i]["weaponProp"][0]["type"];//获取武器成长主词条类型
+                let mainFirstValue = zWep[i]["weaponProp"][0]["initValue"];//获取武器初始主词条
+                let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
+                let addNum = getAddPropValue(zWep[i]["rankLevel"], getPropRange(preLevel, isPropChecked()));
+                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + (mainNum + addNum).toFixed(0) + "</span>";
+
+                //写入武器名字和武器类型
                 mB[0].innerHTML = "<span>" + zWep[i]['weaponName'] + "</span>";
                 mC[0].innerHTML = "<span>" + zWep[i]["weaponType"] + "</span>";
+
+                //重置武器特效
                 affixName[0].innerHTML = "";
                 affixText[0].innerHTML = "";
+
+                //改变星级
                 q(getPresentStar(), zWep[i]["rankLevel"]);
+
+                //改变副词条
                 if (zWep[i]["weaponProp"][1]) {
+
+                    //写入武器特效
                     affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
                     affixText[0].innerHTML = "<span>• " + zWep[i]["skillAffixText"] + "</span>";
+
+                    //写入武器副词条及数值
                     switch (zWep[i]["weaponProp"][1]["propType"]) {
+
+                        //对于元素精通不做变化输出
                         case "元素精通":
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
                                 + "<span>" + zWep[i]["weaponProp"][1]["initValue"].toFixed(0) + "</span>";
                             break;
+
+                        //对于小数数据变成对应的百分数及四舍五入
                         default:
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
                                 + "<span>" + (zWep[i]["weaponProp"][1]["initValue"] * 100).toFixed(1) + "%" + "</span>";
                             break;
                     }
                 }
+                //对于没有副词条的写入其他的东西
                 if (!zWep[i]["weaponProp"][1]) {
                     mA[1].innerHTML = "<span>" + "没有副词条的" + "</span>"
                         + "<span>" + "神圣武器" + "</span>";
@@ -58,6 +92,7 @@ window.onload = function () {
         }
     });
 
+    //获取武器类型显示图片
     function getType(weaponType) {
         switch (weaponType) {
             case "单手剑":
@@ -80,6 +115,7 @@ window.onload = function () {
         }
     }
 
+    //获取当前显示的武器星级
     function getPresentStar() {
         // console.log(mE[0].getElementsByTagName('i').length);
         return mE[0].getElementsByTagName('i').length;
@@ -103,6 +139,7 @@ window.onload = function () {
         }
         addNewLi(siftWType(), siftWRank());
     }
+    //创建武器列表
     function addNewLi(WsiftType, WsiftRank) {
         delList();
         if (WsiftType == false && WsiftRank == false) {
@@ -176,6 +213,7 @@ window.onload = function () {
         //测试用
         delList();
     } */
+    //删除武器列表
     function delList() {
         for (let i = wepList.children.length; i >= 1; i--) {
             wepList.children[i - 1].remove();
@@ -250,8 +288,20 @@ window.onload = function () {
     //等级滑块
     lvRangeBtn.oninput = rangeCreateLv;
     function rangeCreateLv() {
-        lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent =
-            "Lv." + lvRangeBtn.value;
+        lvRangeBtn.parentNode.getElementsByTagName('span')[0].textContent = "Lv." + lvRangeBtn.value;
+        for (let i = 0; i < zWep.length; i++) {
+            if (zWep[i]["weaponName"] == mB[0].textContent) {
+                //写入武器主词条和对应数值
+                let preLevel = lvRangeBtn.value;//获取当前等级
+                let propMainType = zWep[i]["weaponProp"][0]["type"];//获取武器成长主词条类型
+                let mainFirstValue = zWep[i]["weaponProp"][0]["initValue"];//获取武器初始主词条
+                let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
+                let addNum = getAddPropValue(zWep[i]["rankLevel"], getPropRange(preLevel, isPropChecked()));
+                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + (mainNum + addNum).toFixed(0) + "</span>";
+            }
+
+
+        }
     }
     //侧边菜单
     showList.onclick = function () {
@@ -264,7 +314,68 @@ window.onload = function () {
             wList.className = "wList";
             showList.className = "showList";
         }
+    }
 
+    //获取武器对应等级的等级乘数
+    function getPropValue(preLevel, propType, firstValue, isProp) {
 
+        for (let i = 0; i < wce.length; i++) {
+            if (preLevel == wce[i]["level"]) {
+                for (let j = 0; j < wce[i]["curveInfos"].length; j++) {
+                    if (propType == wce[i]["curveInfos"][j]["type"]) {
+                        return wce[i]["curveInfos"][j]["value"] * firstValue;
+                    }
+                }
+            }
+        }
+    }
+    //获取武器突破等级
+    function getPropRange(preLevel, isProp) {
+        if ((preLevel == 80 && isProp) || preLevel >= 81) return 6;
+        if ((preLevel == 70 && isProp) || preLevel >= 71) return 5;
+        if ((preLevel == 60 && isProp) || preLevel >= 61) return 4;
+        if ((preLevel == 50 && isProp) || preLevel >= 51) return 3;
+        if ((preLevel == 40 && isProp) || preLevel >= 41) return 2;
+        if ((preLevel == 20 && isProp) || preLevel >= 21) return 1;
+        else return 0;
+    }
+    //获取武器对应突破等级的数值
+    function getAddPropValue(weaponRankLevel, propLevel, isProp) {
+        for (let i = 0; i < addPropValue.length; i++) {
+            if (weaponRankLevel == addPropValue[i]["rankLevel"] && propLevel != 0) {
+                if ((weaponRankLevel == 1 || weaponRankLevel == 2) && propLevel == 5) {
+                    return addPropValue[i]["propValue"][propLevel - 2];
+                }
+                let len = addPropValue[i]["propValue"].length;
+                return addPropValue[i]["propValue"][propLevel - 1];
+            }
+            if (propLevel == 0) return 0;
+        }
+    }
+    //获取是否突破属性
+    propBtn.addEventListener("click", isPropChecked);
+    propBtn.addEventListener("click", changeMainValue);
+    function isPropChecked() {
+        if (propBtn.checked == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function changeMainValue() {
+        for (let i = 0; i < zWep.length; i++) {
+            if (zWep[i]["weaponName"] == mB[0].textContent) {
+                //写入武器主词条和对应数值
+                let preLevel = lvRangeBtn.value;//获取当前等级
+                let propMainType = zWep[i]["weaponProp"][0]["type"];//获取武器成长主词条类型
+                let mainFirstValue = zWep[i]["weaponProp"][0]["initValue"];//获取武器初始主词条
+                let addNum = getAddPropValue(zWep[i]["rankLevel"], getPropRange(preLevel, isPropChecked()));
+                let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
+                mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + (mainNum + addNum).toFixed(0) + "</span>";
+            }
+
+        }
     }
 }
+

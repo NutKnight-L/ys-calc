@@ -19,23 +19,23 @@
         <div class="weaponShowBox">
             <div class="wTitle">
                 <div class="wName">
-                    <span>无锋剑</span>
+                    <span>选择你的武器</span>
                 </div>
                 <div class="wType">
-                    <span>单手剑</span>
+                    <span>选完才知道是什么</span>
                 </div>
                 <div class="wIcon">
-                    <img src="img/Icon_Sword.png">
+                    <img src="./img/que.png">
                 </div>
             </div>
             <div class="wValue">
                 <div class="moduleA">
-                    <span>基础攻击力</span>
-                    <span>23</span>
+                    <span>锤子做的铁剑</span>
+                    <span>一刀99</span>
                 </div>
                 <div class="moduleA">
-                    <span>没有副词条的</span>
-                    <span>神圣武器</span>
+                    <span>合金锻的废铁</span>
+                    <span>天长地久</span>
                 </div>
             </div>
             <div class="wMes">
@@ -45,12 +45,14 @@
             <div class="wInput">
                 <span>Lv.1</span>
                 <input type="number" id="weplevel" max="90" min="1" step="1" value="1">
+                <!-- <i class="fa-solid fa-diamond"></i>
                 <i class="fa-solid fa-diamond"></i>
                 <i class="fa-solid fa-diamond"></i>
                 <i class="fa-solid fa-diamond"></i>
                 <i class="fa-solid fa-diamond"></i>
-                <i class="fa-solid fa-diamond"></i>
-                <i class="fa-solid fa-diamond"></i>
+                <i class="fa-solid fa-diamond"></i> -->
+                <input type="checkbox" id="isPropBtn" checked>
+                <label for="isPropBtn">显示突破后数值</label>
             </div>
             <div class="wAffix">
                 <div class="affixName">
@@ -113,6 +115,8 @@
 
     </div>
 
+    <script src="./js/addPropValue.js"></script>
+    <script src="./js/WeaponCurveExcelConfigData.js"></script>
     <script src="js/zWep.js"></script>
     <script src="js/script.js"></script>
 </body>
