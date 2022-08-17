@@ -43,6 +43,7 @@ window.onload = function () {
                 //写入武器主词条和对应数值
                 let preLevel = lvRangeBtn.value;//获取当前等级
                 let propMainType = zWep[i]["weaponProp"][0]["type"];//获取武器成长主词条类型
+
                 let mainFirstValue = zWep[i]["weaponProp"][0]["initValue"];//获取武器初始主词条
                 let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
                 let addNum = getAddPropValue(zWep[i]["rankLevel"], getPropRange(preLevel, isPropChecked()));
@@ -61,6 +62,8 @@ window.onload = function () {
 
                 //改变副词条
                 if (zWep[i]["weaponProp"][1]) {
+                    let propSecType = zWep[i]["weaponProp"][1]["type"];
+                    let propSecValue = zWep[i]["weaponProp"][1]["initValue"];
 
                     //写入武器特效
                     affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
@@ -72,13 +75,13 @@ window.onload = function () {
                         //对于元素精通不做变化输出
                         case "元素精通":
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
-                                + "<span>" + zWep[i]["weaponProp"][1]["initValue"].toFixed(0) + "</span>";
+                                + "<span>" + (getPropValue(preLevel, propSecType, propSecValue, null)).toFixed(0) + "</span>";
                             break;
 
                         //对于小数数据变成对应的百分数及四舍五入
                         default:
                             mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
-                                + "<span>" + (zWep[i]["weaponProp"][1]["initValue"] * 100).toFixed(1) + "%" + "</span>";
+                                + "<span>" + ((getPropValue(preLevel, propSecType, propSecValue, null)) * 100).toFixed(1) + "%" + "</span>";
                             break;
                     }
                 }
@@ -298,7 +301,32 @@ window.onload = function () {
                 let mainNum = getPropValue(preLevel, propMainType, mainFirstValue, null);
                 let addNum = getAddPropValue(zWep[i]["rankLevel"], getPropRange(preLevel, isPropChecked()));
                 mA[0].innerHTML = "<span>基础攻击力</span>" + "<span>" + (mainNum + addNum).toFixed(0) + "</span>";
+                if (zWep[i]["weaponProp"][1]) {
+                    let propSecType = zWep[i]["weaponProp"][1]["type"];
+                    let propSecValue = zWep[i]["weaponProp"][1]["initValue"];
+
+                    //写入武器特效
+                    affixName[0].innerHTML = "<span>" + zWep[i]["skillAffixName"] + "</span>";
+                    affixText[0].innerHTML = "<span>• " + zWep[i]["skillAffixText"] + "</span>";
+
+                    //写入武器副词条及数值
+                    switch (zWep[i]["weaponProp"][1]["propType"]) {
+
+                        //对于元素精通不做变化输出
+                        case "元素精通":
+                            mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
+                                + "<span>" + getPropValue(preLevel, propSecType, propSecValue, null).toFixed(0) + "</span>";
+                            break;
+
+                        //对于小数数据变成对应的百分数及四舍五入
+                        default:
+                            mA[1].innerHTML = "<span>" + zWep[i]["weaponProp"][1]["propType"] + "</span>"
+                                + "<span>" + ((getPropValue(preLevel, propSecType, propSecValue, null)) * 100).toFixed(1) + "%" + "</span>";
+                            break;
+                    }
+                }
             }
+
 
 
         }
