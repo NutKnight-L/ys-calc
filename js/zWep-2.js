@@ -11,9 +11,7 @@ var zWep = [
             }
         ],
         "descText": "少年人的梦想、踏上旅途的兴奋——如果这两种珍贵的品质还不够锋利，那就用勇气补足吧。",
-        "id": 11101,
-        "icon": "UI_EquipIcon_Sword_Blunt",
-        "awakeIcon": "UI_EquipIcon_Sword_Blunt_Awaken"
+        "id": 11101
     },
     {
         "weaponName": "银剑",
@@ -27,9 +25,7 @@ var zWep = [
             }
         ],
         "descText": "能退魔的银剑。大家都知道，其实用料是银合金而不是纯银。",
-        "id": 11201,
-        "icon": "UI_EquipIcon_Sword_Silver",
-        "awakeIcon": "UI_EquipIcon_Sword_Silver_Awaken"
+        "id": 11201
     },
     {
         "weaponName": "冷刃",
@@ -67,9 +63,7 @@ var zWep = [
             "level5": [
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Steel",
-        "awakeIcon": "UI_EquipIcon_Sword_Steel_Awaken"
+        }
     },
     {
         "weaponName": "黎明神剑",
@@ -107,9 +101,7 @@ var zWep = [
             "level5": [
                 0.2800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Dawn",
-        "awakeIcon": "UI_EquipIcon_Sword_Dawn_Awaken"
+        }
     },
     {
         "weaponName": "旅行剑",
@@ -152,9 +144,7 @@ var zWep = [
                 0.019999999552965164,
                 1
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Traveler",
-        "awakeIcon": "UI_EquipIcon_Sword_Traveler_Awaken"
+        }
     },
     {
         "weaponName": "暗铁剑",
@@ -197,9 +187,7 @@ var zWep = [
                 0.4000000059604645,
                 12
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Darker",
-        "awakeIcon": "UI_EquipIcon_Sword_Darker_Awaken"
+        }
     },
     {
         "weaponName": "吃虎鱼刀",
@@ -247,9 +235,7 @@ var zWep = [
                 4,
                 11
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Sashimi",
-        "awakeIcon": "UI_EquipIcon_Sword_Sashimi_Awaken"
+        }
     },
     {
         "weaponName": "飞天御剑",
@@ -292,9 +278,7 @@ var zWep = [
                 0.23999999463558197,
                 15
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Mitsurugi",
-        "awakeIcon": "UI_EquipIcon_Sword_Mitsurugi_Awaken"
+        }
     },
     {
         "weaponName": "西风剑",
@@ -337,9 +321,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Zephyrus",
-        "awakeIcon": "UI_EquipIcon_Sword_Zephyrus_Awaken"
+        }
     },
     {
         "weaponName": "笛剑",
@@ -382,9 +364,7 @@ var zWep = [
                 1,
                 2
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Troupe",
-        "awakeIcon": "UI_EquipIcon_Sword_Troupe_Awaken"
+        }
     },
     {
         "weaponName": "祭礼剑",
@@ -427,9 +407,7 @@ var zWep = [
                 0.800000011920929,
                 16
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Fossil",
-        "awakeIcon": "UI_EquipIcon_Sword_Fossil_Awaken"
+        }
     },
     {
         "weaponName": "宗室长剑",
@@ -467,9 +445,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Theocrat",
-        "awakeIcon": "UI_EquipIcon_Sword_Theocrat_Awaken"
+        }
     },
     {
         "weaponName": "匣里龙吟",
@@ -507,9 +483,7 @@ var zWep = [
             "level5": [
                 0.36000001430511475
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Rockkiller",
-        "awakeIcon": "UI_EquipIcon_Sword_Rockkiller_Awaken"
+        }
     },
     {
         "weaponName": "试作斩岩",
@@ -547,9 +521,7 @@ var zWep = [
             "level5": [
                 0.07999999821186066
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Proto",
-        "awakeIcon": "UI_EquipIcon_Sword_Proto_Awaken"
+        }
     },
     {
         "weaponName": "铁蜂刺",
@@ -597,9 +569,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Exotic",
-        "awakeIcon": "UI_EquipIcon_Sword_Exotic_Awaken"
+        }
     },
     {
         "weaponName": "黑岩长剑",
@@ -642,9 +612,7 @@ var zWep = [
                 0.23999999463558197,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Blackrock",
-        "awakeIcon": "UI_EquipIcon_Sword_Blackrock_Awaken"
+        }
     },
     {
         "weaponName": "黑剑",
@@ -697,9 +665,7 @@ var zWep = [
                 5,
                 1
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Bloodstained",
-        "awakeIcon": "UI_EquipIcon_Sword_Bloodstained_Awaken"
+        }
     },
     {
         "weaponName": "暗巷闪光",
@@ -742,9 +708,7 @@ var zWep = [
                 0.23999999463558197,
                 5
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Outlaw",
-        "awakeIcon": "UI_EquipIcon_Sword_Outlaw_Awaken"
+        }
     },
     {
         "weaponName": "腐殖之剑",
@@ -787,9 +751,7 @@ var zWep = [
                 0.3199999928474426,
                 0.11999999731779099
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Magnum",
-        "awakeIcon": "UI_EquipIcon_Sword_Magnum_Awaken"
+        }
     },
     {
         "weaponName": "天目影打刀",
@@ -842,9 +804,7 @@ var zWep = [
                 5,
                 12
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Bakufu",
-        "awakeIcon": "UI_EquipIcon_Sword_Bakufu_Awaken"
+        }
     },
     {
         "weaponName": "辰砂之纺锤",
@@ -897,9 +857,7 @@ var zWep = [
                 1.5,
                 0.10000000149011612
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Opus",
-        "awakeIcon": "UI_EquipIcon_Sword_Opus_Awaken"
+        }
     },
     {
         "weaponName": "笼钓瓶一心",
@@ -932,9 +890,7 @@ var zWep = [
             "level3": [],
             "level4": [],
             "level5": []
-        },
-        "icon": "UI_EquipIcon_Sword_Youtou",
-        "awakeIcon": "UI_EquipIcon_Sword_Youtou_Awaken"
+        }
     },
     {
         "weaponName": "风鹰剑",
@@ -987,9 +943,7 @@ var zWep = [
                 3.200000047683716,
                 15
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Falcon",
-        "awakeIcon": "UI_EquipIcon_Sword_Falcon_Awaken"
+        }
     },
     {
         "weaponName": "天空之刃",
@@ -1047,9 +1001,7 @@ var zWep = [
                 0.4000000059604645,
                 12
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Dvalin",
-        "awakeIcon": "UI_EquipIcon_Sword_Dvalin_Awaken"
+        }
     },
     {
         "weaponName": "苍古自由之誓",
@@ -1112,9 +1064,7 @@ var zWep = [
                 0.4000000059604645,
                 20
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Widsith",
-        "awakeIcon": "UI_EquipIcon_Sword_Widsith_Awaken"
+        }
     },
     {
         "weaponName": "斫峰之刃",
@@ -1162,9 +1112,7 @@ var zWep = [
                 0.07999999821186066,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Kunwu",
-        "awakeIcon": "UI_EquipIcon_Sword_Kunwu_Awaken"
+        }
     },
     {
         "weaponName": "磐岩结绿",
@@ -1207,9 +1155,7 @@ var zWep = [
                 0.4000000059604645,
                 0.024000000208616257
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Morax",
-        "awakeIcon": "UI_EquipIcon_Sword_Morax_Awaken"
+        }
     },
     {
         "weaponName": "雾切之回光",
@@ -1272,9 +1218,7 @@ var zWep = [
                 5,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Narukami",
-        "awakeIcon": "UI_EquipIcon_Sword_Narukami_Awaken"
+        }
     },
     {
         "weaponName": "波乱月白经津",
@@ -1332,9 +1276,7 @@ var zWep = [
                 0.4000000059604645,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Sword_Amenoma",
-        "awakeIcon": "UI_EquipIcon_Sword_Amenoma_Awaken"
+        }
     },
     {
         "weaponName": "训练大剑",
@@ -1348,9 +1290,7 @@ var zWep = [
             }
         ],
         "descText": "仅仅是削出了剑形的厚重铁片。在意志强韧的人手里，也有劈开磐石的力量。",
-        "id": 12101,
-        "icon": "UI_EquipIcon_Claymore_Aniki",
-        "awakeIcon": "UI_EquipIcon_Claymore_Aniki_Awaken"
+        "id": 12101
     },
     {
         "weaponName": "佣兵重剑",
@@ -1364,9 +1304,7 @@ var zWep = [
             }
         ],
         "descText": "沉重坚实的古旧大剑，饱经战火与岁月的洗练。",
-        "id": 12201,
-        "icon": "UI_EquipIcon_Claymore_Oyaji",
-        "awakeIcon": "UI_EquipIcon_Claymore_Oyaji_Awaken"
+        "id": 12201
     },
     {
         "weaponName": "铁影阔剑",
@@ -1409,9 +1347,7 @@ var zWep = [
                 0.8999999761581421,
                 0.5
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Glaive",
-        "awakeIcon": "UI_EquipIcon_Claymore_Glaive_Awaken"
+        }
     },
     {
         "weaponName": "沐浴龙血的剑",
@@ -1449,9 +1385,7 @@ var zWep = [
             "level5": [
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Siegfry",
-        "awakeIcon": "UI_EquipIcon_Claymore_Siegfry_Awaken"
+        }
     },
     {
         "weaponName": "白铁大剑",
@@ -1489,9 +1423,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Tin",
-        "awakeIcon": "UI_EquipIcon_Claymore_Tin_Awaken"
+        }
     },
     {
         "weaponName": "以理服人",
@@ -1539,9 +1471,7 @@ var zWep = [
                 15,
                 3
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Reasoning",
-        "awakeIcon": "UI_EquipIcon_Claymore_Reasoning_Awaken"
+        }
     },
     {
         "weaponName": "飞天大御剑",
@@ -1579,9 +1509,7 @@ var zWep = [
             "level5": [
                 0.10000000149011612
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Mitsurugi",
-        "awakeIcon": "UI_EquipIcon_Claymore_Mitsurugi_Awaken"
+        }
     },
     {
         "weaponName": "西风大剑",
@@ -1624,9 +1552,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Zephyrus",
-        "awakeIcon": "UI_EquipIcon_Claymore_Zephyrus_Awaken"
+        }
     },
     {
         "weaponName": "钟剑",
@@ -1674,9 +1600,7 @@ var zWep = [
                 45,
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Troupe",
-        "awakeIcon": "UI_EquipIcon_Claymore_Troupe_Awaken"
+        }
     },
     {
         "weaponName": "祭礼大剑",
@@ -1719,9 +1643,7 @@ var zWep = [
                 0.800000011920929,
                 16
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Fossil",
-        "awakeIcon": "UI_EquipIcon_Claymore_Fossil_Awaken"
+        }
     },
     {
         "weaponName": "宗室大剑",
@@ -1759,9 +1681,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Theocrat",
-        "awakeIcon": "UI_EquipIcon_Claymore_Theocrat_Awaken"
+        }
     },
     {
         "weaponName": "雨裁",
@@ -1799,9 +1719,7 @@ var zWep = [
             "level5": [
                 0.36000001430511475
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Perdue",
-        "awakeIcon": "UI_EquipIcon_Claymore_Perdue_Awaken"
+        }
     },
     {
         "weaponName": "试作古华",
@@ -1844,9 +1762,7 @@ var zWep = [
                 0.5,
                 4.800000190734863
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Proto",
-        "awakeIcon": "UI_EquipIcon_Claymore_Proto_Awaken"
+        }
     },
     {
         "weaponName": "白影剑",
@@ -1884,9 +1800,7 @@ var zWep = [
             "level5": [
                 0.11999999731779099
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Exotic",
-        "awakeIcon": "UI_EquipIcon_Claymore_Exotic_Awaken"
+        }
     },
     {
         "weaponName": "黑岩斩刀",
@@ -1929,9 +1843,7 @@ var zWep = [
                 0.23999999463558197,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Blackrock",
-        "awakeIcon": "UI_EquipIcon_Claymore_Blackrock_Awaken"
+        }
     },
     {
         "weaponName": "螭骨剑",
@@ -1979,9 +1891,7 @@ var zWep = [
                 0.10000000149011612,
                 0.019999999552965164
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Kione",
-        "awakeIcon": "UI_EquipIcon_Claymore_Kione_Awaken"
+        }
     },
     {
         "weaponName": "千岩古剑",
@@ -2029,9 +1939,7 @@ var zWep = [
                 0.07000000029802322,
                 4
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Lapis",
-        "awakeIcon": "UI_EquipIcon_Claymore_Lapis_Awaken"
+        }
     },
     {
         "weaponName": "雪葬的星银",
@@ -2084,9 +1992,7 @@ var zWep = [
                 3.5999999046325684,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Dragonfell",
-        "awakeIcon": "UI_EquipIcon_Claymore_Dragonfell_Awaken"
+        }
     },
     {
         "weaponName": "衔珠海皇",
@@ -2139,9 +2045,7 @@ var zWep = [
                 2,
                 15
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_MillenniaTuna",
-        "awakeIcon": "UI_EquipIcon_Claymore_MillenniaTuna_Awaken"
+        }
     },
     {
         "weaponName": "桂木斩长正",
@@ -2199,9 +2103,7 @@ var zWep = [
                 6,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Bakufu",
-        "awakeIcon": "UI_EquipIcon_Claymore_Bakufu_Awaken"
+        }
     },
     {
         "weaponName": "恶王丸",
@@ -2244,9 +2146,7 @@ var zWep = [
                 0.23999999463558197,
                 0.800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Maria",
-        "awakeIcon": "UI_EquipIcon_Claymore_Maria_Awaken"
+        }
     },
     {
         "weaponName": "天空之傲",
@@ -2299,9 +2199,7 @@ var zWep = [
                 20,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Dvalin",
-        "awakeIcon": "UI_EquipIcon_Claymore_Dvalin_Awaken"
+        }
     },
     {
         "weaponName": "狼的末路",
@@ -2344,9 +2242,7 @@ var zWep = [
                 0.4000000059604645,
                 0.800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Wolfmound",
-        "awakeIcon": "UI_EquipIcon_Claymore_Wolfmound_Awaken"
+        }
     },
     {
         "weaponName": "松籁响起之时",
@@ -2409,9 +2305,7 @@ var zWep = [
                 0.4000000059604645,
                 20
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Widsith",
-        "awakeIcon": "UI_EquipIcon_Claymore_Widsith_Awaken"
+        }
     },
     {
         "weaponName": "无工之剑",
@@ -2459,9 +2353,7 @@ var zWep = [
                 0.07999999821186066,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Kunwu",
-        "awakeIcon": "UI_EquipIcon_Claymore_Kunwu_Awaken"
+        }
     },
     {
         "weaponName": "赤角石溃杵",
@@ -2509,9 +2401,7 @@ var zWep = [
                 0.800000011920929,
                 80000
             ]
-        },
-        "icon": "UI_EquipIcon_Claymore_Itadorimaru",
-        "awakeIcon": "UI_EquipIcon_Claymore_Itadorimaru_Awaken"
+        }
     },
     {
         "weaponName": "新手长枪",
@@ -2525,9 +2415,7 @@ var zWep = [
             }
         ],
         "descText": "笔直得像旗杆一般的长枪，挥舞起来颇具气势。足以应付大多数情况。",
-        "id": 13101,
-        "icon": "UI_EquipIcon_Pole_Gewalt",
-        "awakeIcon": "UI_EquipIcon_Pole_Gewalt_Awaken"
+        "id": 13101
     },
     {
         "weaponName": "铁尖枪",
@@ -2541,9 +2429,7 @@ var zWep = [
             }
         ],
         "descText": "一头有尖，可攻可守的护身武器。在旅者当中十分流行。",
-        "id": 13201,
-        "icon": "UI_EquipIcon_Pole_Rod",
-        "awakeIcon": "UI_EquipIcon_Pole_Rod_Awaken"
+        "id": 13201
     },
     {
         "weaponName": "白缨枪",
@@ -2581,9 +2467,7 @@ var zWep = [
             "level5": [
                 0.47999998927116394
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Ruby",
-        "awakeIcon": "UI_EquipIcon_Pole_Ruby_Awaken"
+        }
     },
     {
         "weaponName": "钺矛",
@@ -2626,9 +2510,7 @@ var zWep = [
                 3.200000047683716,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Halberd",
-        "awakeIcon": "UI_EquipIcon_Pole_Halberd_Awaken"
+        }
     },
     {
         "weaponName": "黑缨枪",
@@ -2666,9 +2548,7 @@ var zWep = [
             "level5": [
                 0.800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Noire",
-        "awakeIcon": "UI_EquipIcon_Pole_Noire_Awaken"
+        }
     },
     {
         "weaponName": "匣里灭辰",
@@ -2706,9 +2586,7 @@ var zWep = [
             "level5": [
                 0.36000001430511475
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Stardust",
-        "awakeIcon": "UI_EquipIcon_Pole_Stardust_Awaken"
+        }
     },
     {
         "weaponName": "试作星镰",
@@ -2746,9 +2624,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Proto",
-        "awakeIcon": "UI_EquipIcon_Pole_Proto_Awaken"
+        }
     },
     {
         "weaponName": "流月针",
@@ -2786,9 +2662,7 @@ var zWep = [
             "level5": [
                 0.4000000059604645
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Exotic",
-        "awakeIcon": "UI_EquipIcon_Pole_Exotic_Awaken"
+        }
     },
     {
         "weaponName": "黑岩刺枪",
@@ -2831,9 +2705,7 @@ var zWep = [
                 0.23999999463558197,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Blackrock",
-        "awakeIcon": "UI_EquipIcon_Pole_Blackrock_Awaken"
+        }
     },
     {
         "weaponName": "决斗之枪",
@@ -2886,9 +2758,7 @@ var zWep = [
                 0.3199999928474426,
                 0.3199999928474426
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Gladiator",
-        "awakeIcon": "UI_EquipIcon_Pole_Gladiator_Awaken"
+        }
     },
     {
         "weaponName": "千岩长枪",
@@ -2936,9 +2806,7 @@ var zWep = [
                 0.07000000029802322,
                 4
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Lapis",
-        "awakeIcon": "UI_EquipIcon_Pole_Lapis_Awaken"
+        }
     },
     {
         "weaponName": "西风长枪",
@@ -2981,9 +2849,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Zephyrus",
-        "awakeIcon": "UI_EquipIcon_Pole_Zephyrus_Awaken"
+        }
     },
     {
         "weaponName": "宗室猎枪",
@@ -3021,9 +2887,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Theocrat",
-        "awakeIcon": "UI_EquipIcon_Pole_Theocrat_Awaken"
+        }
     },
     {
         "weaponName": "龙脊长枪",
@@ -3076,9 +2940,7 @@ var zWep = [
                 3.5999999046325684,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Everfrost",
-        "awakeIcon": "UI_EquipIcon_Pole_Everfrost_Awaken"
+        }
     },
     {
         "weaponName": "喜多院十文字",
@@ -3136,9 +2998,7 @@ var zWep = [
                 6,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Bakufu",
-        "awakeIcon": "UI_EquipIcon_Pole_Bakufu_Awaken"
+        }
     },
     {
         "weaponName": "「渔获」",
@@ -3181,9 +3041,7 @@ var zWep = [
                 0.3199999928474426,
                 0.11999999731779099
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Mori",
-        "awakeIcon": "UI_EquipIcon_Pole_Mori_Awaken"
+        }
     },
     {
         "weaponName": "断浪长鳍",
@@ -3226,9 +3084,7 @@ var zWep = [
                 0.23999999463558197,
                 0.800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Maria",
-        "awakeIcon": "UI_EquipIcon_Pole_Maria_Awaken"
+        }
     },
     {
         "weaponName": "护摩之杖",
@@ -3276,9 +3132,7 @@ var zWep = [
                 0.01600000075995922,
                 0.017999999225139618
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Homa",
-        "awakeIcon": "UI_EquipIcon_Pole_Homa_Awaken"
+        }
     },
     {
         "weaponName": "天空之脊",
@@ -3336,9 +3190,7 @@ var zWep = [
                 1,
                 2
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Dvalin",
-        "awakeIcon": "UI_EquipIcon_Pole_Dvalin_Awaken"
+        }
     },
     {
         "weaponName": "贯虹之槊",
@@ -3386,9 +3238,7 @@ var zWep = [
                 0.07999999821186066,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Kunwu",
-        "awakeIcon": "UI_EquipIcon_Pole_Kunwu_Awaken"
+        }
     },
     {
         "weaponName": "和璞鸢",
@@ -3431,9 +3281,7 @@ var zWep = [
                 0.05999999865889549,
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Morax",
-        "awakeIcon": "UI_EquipIcon_Pole_Morax_Awaken"
+        }
     },
     {
         "weaponName": "息灾",
@@ -3491,9 +3339,7 @@ var zWep = [
                 6,
                 20
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Santika",
-        "awakeIcon": "UI_EquipIcon_Pole_Santika_Awaken"
+        }
     },
     {
         "weaponName": "薙草之稻光",
@@ -3546,9 +3392,7 @@ var zWep = [
                 0.5,
                 12
             ]
-        },
-        "icon": "UI_EquipIcon_Pole_Narukami",
-        "awakeIcon": "UI_EquipIcon_Pole_Narukami_Awaken"
+        }
     },
     {
         "weaponName": "学徒笔记",
@@ -3562,9 +3406,7 @@ var zWep = [
             }
         ],
         "descText": "某个优等生留下的学习笔记，娟秀的字迹非常好看。记录了不少实用的咒语。",
-        "id": 14101,
-        "icon": "UI_EquipIcon_Catalyst_Apprentice",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Apprentice_Awaken"
+        "id": 14101
     },
     {
         "weaponName": "口袋魔导书",
@@ -3578,9 +3420,7 @@ var zWep = [
             }
         ],
         "descText": "精心编纂，只留下考试重点的魔导参考小册。",
-        "id": 14201,
-        "icon": "UI_EquipIcon_Catalyst_Pocket",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Pocket_Awaken"
+        "id": 14201
     },
     {
         "weaponName": "魔导绪论",
@@ -3618,9 +3458,7 @@ var zWep = [
             "level5": [
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Intro",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Intro_Awaken"
+        }
     },
     {
         "weaponName": "讨龙英杰谭",
@@ -3668,9 +3506,7 @@ var zWep = [
                 10,
                 20
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Pulpfic",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Pulpfic_Awaken"
+        }
     },
     {
         "weaponName": "异世界行记",
@@ -3708,9 +3544,7 @@ var zWep = [
             "level5": [
                 0.019999999552965164
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Lightnov",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Lightnov_Awaken"
+        }
     },
     {
         "weaponName": "翡玉法球",
@@ -3748,9 +3582,7 @@ var zWep = [
             "level5": [
                 0.4000000059604645
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Jade",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Jade_Awaken"
+        }
     },
     {
         "weaponName": "甲级宝珏",
@@ -3793,9 +3625,7 @@ var zWep = [
                 0.20000000298023224,
                 15
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Phoney",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Phoney_Awaken"
+        }
     },
     {
         "weaponName": "西风秘典",
@@ -3838,9 +3668,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Zephyrus",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Zephyrus_Awaken"
+        }
     },
     {
         "weaponName": "流浪乐章",
@@ -3898,9 +3726,7 @@ var zWep = [
                 10,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Troupe",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Troupe_Awaken"
+        }
     },
     {
         "weaponName": "祭礼残章",
@@ -3943,9 +3769,7 @@ var zWep = [
                 0.800000011920929,
                 16
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Fossil",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Fossil_Awaken"
+        }
     },
     {
         "weaponName": "宗室秘法录",
@@ -3983,9 +3807,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Theocrat",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Theocrat_Awaken"
+        }
     },
     {
         "weaponName": "匣里日月",
@@ -4023,9 +3845,7 @@ var zWep = [
             "level5": [
                 0.4000000059604645
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Resurrection",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Resurrection_Awaken"
+        }
     },
     {
         "weaponName": "试作金珀",
@@ -4078,9 +3898,7 @@ var zWep = [
                 6,
                 0.05999999865889549
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Proto",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Proto_Awaken"
+        }
     },
     {
         "weaponName": "万国诸海图谱",
@@ -4118,9 +3936,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Exotic",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Exotic_Awaken"
+        }
     },
     {
         "weaponName": "黑岩绯玉",
@@ -4163,9 +3979,7 @@ var zWep = [
                 0.23999999463558197,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Blackrock",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Blackrock_Awaken"
+        }
     },
     {
         "weaponName": "昭心",
@@ -4218,9 +4032,7 @@ var zWep = [
                 3.5999999046325684,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Truelens",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Truelens_Awaken"
+        }
     },
     {
         "weaponName": "暗巷的酒与诗",
@@ -4273,9 +4085,7 @@ var zWep = [
                 0.2199999988079071,
                 5
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Outlaw",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Outlaw_Awaken"
+        }
     },
     {
         "weaponName": "忍冬之果",
@@ -4328,9 +4138,7 @@ var zWep = [
                 3.5999999046325684,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Everfrost",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Everfrost_Awaken"
+        }
     },
     {
         "weaponName": "嘟嘟可故事集",
@@ -4383,9 +4191,7 @@ var zWep = [
                 0.1599999964237213,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Ludiharpastum",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Ludiharpastum_Awaken"
+        }
     },
     {
         "weaponName": "白辰之环",
@@ -4433,9 +4239,7 @@ var zWep = [
                 6,
                 1
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Bakufu",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Bakufu_Awaken"
+        }
     },
     {
         "weaponName": "证誓之明瞳",
@@ -4478,9 +4282,7 @@ var zWep = [
                 0.47999998927116394,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Jyanome",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Jyanome_Awaken"
+        }
     },
     {
         "weaponName": "天空之卷",
@@ -4533,9 +4335,7 @@ var zWep = [
                 3.200000047683716,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Dvalin",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Dvalin_Awaken"
+        }
     },
     {
         "weaponName": "四风原典",
@@ -4578,9 +4378,7 @@ var zWep = [
                 0.10000000149011612,
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Fourwinds",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Fourwinds_Awaken"
+        }
     },
     {
         "weaponName": "尘世之锁",
@@ -4628,9 +4426,7 @@ var zWep = [
                 0.07999999821186066,
                 8
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Kunwu",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Kunwu_Awaken"
+        }
     },
     {
         "weaponName": "不灭月华",
@@ -4688,9 +4484,7 @@ var zWep = [
                 0.6000000238418579,
                 0.10000000149011612
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Kaleido",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Kaleido_Awaken"
+        }
     },
     {
         "weaponName": "神乐之真意",
@@ -4738,9 +4532,7 @@ var zWep = [
                 16,
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Catalyst_Narukami",
-        "awakeIcon": "UI_EquipIcon_Catalyst_Narukami_Awaken"
+        }
     },
     {
         "weaponName": "猎弓",
@@ -4754,9 +4546,7 @@ var zWep = [
             }
         ],
         "descText": "猎手演奏的音乐由两种音色组成。弓弦颤动的声音，和羽箭破空的低啸。",
-        "id": 15101,
-        "icon": "UI_EquipIcon_Bow_Hunters",
-        "awakeIcon": "UI_EquipIcon_Bow_Hunters_Awaken"
+        "id": 15101
     },
     {
         "weaponName": "历练的猎弓",
@@ -4770,9 +4560,7 @@ var zWep = [
             }
         ],
         "descText": "饱经磨炼又精心护养的弓，经历了漫长的岁月。仿佛会主动配合射手的动作一般好使。",
-        "id": 15201,
-        "icon": "UI_EquipIcon_Bow_Old",
-        "awakeIcon": "UI_EquipIcon_Bow_Old_Awaken"
+        "id": 15201
     },
     {
         "weaponName": "鸦羽弓",
@@ -4810,9 +4598,7 @@ var zWep = [
             "level5": [
                 0.23999999463558197
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Crowfeather",
-        "awakeIcon": "UI_EquipIcon_Bow_Crowfeather_Awaken"
+        }
     },
     {
         "weaponName": "神射手之誓",
@@ -4850,9 +4636,7 @@ var zWep = [
             "level5": [
                 0.47999998927116394
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Arjuna",
-        "awakeIcon": "UI_EquipIcon_Bow_Arjuna_Awaken"
+        }
     },
     {
         "weaponName": "反曲弓",
@@ -4890,9 +4674,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Curve",
-        "awakeIcon": "UI_EquipIcon_Bow_Curve_Awaken"
+        }
     },
     {
         "weaponName": "弹弓",
@@ -4940,9 +4722,7 @@ var zWep = [
                 0.6000000238418579,
                 0.10000000149011612
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Sling",
-        "awakeIcon": "UI_EquipIcon_Bow_Sling_Awaken"
+        }
     },
     {
         "weaponName": "信使",
@@ -4980,9 +4760,7 @@ var zWep = [
             "level5": [
                 2
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Msg",
-        "awakeIcon": "UI_EquipIcon_Bow_Msg_Awaken"
+        }
     },
     {
         "weaponName": "西风猎弓",
@@ -5025,9 +4803,7 @@ var zWep = [
                 1,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Zephyrus",
-        "awakeIcon": "UI_EquipIcon_Bow_Zephyrus_Awaken"
+        }
     },
     {
         "weaponName": "绝弦",
@@ -5065,9 +4841,7 @@ var zWep = [
             "level5": [
                 0.47999998927116394
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Troupe",
-        "awakeIcon": "UI_EquipIcon_Bow_Troupe_Awaken"
+        }
     },
     {
         "weaponName": "祭礼弓",
@@ -5110,9 +4884,7 @@ var zWep = [
                 0.800000011920929,
                 16
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Fossil",
-        "awakeIcon": "UI_EquipIcon_Bow_Fossil_Awaken"
+        }
     },
     {
         "weaponName": "宗室长弓",
@@ -5150,9 +4922,7 @@ var zWep = [
             "level5": [
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Theocrat",
-        "awakeIcon": "UI_EquipIcon_Bow_Theocrat_Awaken"
+        }
     },
     {
         "weaponName": "弓藏",
@@ -5195,9 +4965,7 @@ var zWep = [
                 0.800000011920929,
                 0.10000000149011612
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Recluse",
-        "awakeIcon": "UI_EquipIcon_Bow_Recluse_Awaken"
+        }
     },
     {
         "weaponName": "试作澹月",
@@ -5245,9 +5013,7 @@ var zWep = [
                 0.7200000286102295,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Proto",
-        "awakeIcon": "UI_EquipIcon_Bow_Proto_Awaken"
+        }
     },
     {
         "weaponName": "钢轮弓",
@@ -5295,9 +5061,7 @@ var zWep = [
                 0.024000000208616257,
                 0.30000001192092896
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Exotic",
-        "awakeIcon": "UI_EquipIcon_Bow_Exotic_Awaken"
+        }
     },
     {
         "weaponName": "黑岩战弓",
@@ -5340,9 +5104,7 @@ var zWep = [
                 0.23999999463558197,
                 30
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Blackrock",
-        "awakeIcon": "UI_EquipIcon_Bow_Blackrock_Awaken"
+        }
     },
     {
         "weaponName": "苍翠猎弓",
@@ -5400,9 +5162,7 @@ var zWep = [
                 4,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Viridescent",
-        "awakeIcon": "UI_EquipIcon_Bow_Viridescent_Awaken"
+        }
     },
     {
         "weaponName": "暗巷猎手",
@@ -5445,9 +5205,7 @@ var zWep = [
                 0.03999999910593033,
                 4
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Outlaw",
-        "awakeIcon": "UI_EquipIcon_Bow_Outlaw_Awaken"
+        }
     },
     {
         "weaponName": "落霞",
@@ -5500,9 +5258,7 @@ var zWep = [
                 0.20000000298023224,
                 0.2800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Fallensun",
-        "awakeIcon": "UI_EquipIcon_Bow_Fallensun_Awaken"
+        }
     },
     {
         "weaponName": "幽夜华尔兹",
@@ -5555,9 +5311,7 @@ var zWep = [
                 0.4000000059604645,
                 5
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Nachtblind",
-        "awakeIcon": "UI_EquipIcon_Bow_Nachtblind_Awaken"
+        }
     },
     {
         "weaponName": "风花之颂",
@@ -5600,9 +5354,7 @@ var zWep = [
                 0.3199999928474426,
                 6
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Fleurfair",
-        "awakeIcon": "UI_EquipIcon_Bow_Fleurfair_Awaken"
+        }
     },
     {
         "weaponName": "破魔之弓",
@@ -5650,9 +5402,7 @@ var zWep = [
                 0.23999999463558197,
                 1
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Bakufu",
-        "awakeIcon": "UI_EquipIcon_Bow_Bakufu_Awaken"
+        }
     },
     {
         "weaponName": "曚云之月",
@@ -5695,9 +5445,7 @@ var zWep = [
                 0.23999999463558197,
                 0.800000011920929
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Maria",
-        "awakeIcon": "UI_EquipIcon_Bow_Maria_Awaken"
+        }
     },
     {
         "weaponName": "天空之翼",
@@ -5750,9 +5498,7 @@ var zWep = [
                 1.25,
                 2
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Dvalin",
-        "awakeIcon": "UI_EquipIcon_Bow_Dvalin_Awaken"
+        }
     },
     {
         "weaponName": "阿莫斯之弓",
@@ -5795,9 +5541,7 @@ var zWep = [
                 0.23999999463558197,
                 0.1599999964237213
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Amos",
-        "awakeIcon": "UI_EquipIcon_Bow_Amos_Awaken"
+        }
     },
     {
         "weaponName": "终末嗟叹之诗",
@@ -5860,9 +5604,7 @@ var zWep = [
                 0.4000000059604645,
                 20
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Widsith",
-        "awakeIcon": "UI_EquipIcon_Bow_Widsith_Awaken"
+        }
     },
     {
         "weaponName": "冬极白星",
@@ -5925,9 +5667,7 @@ var zWep = [
                 0.6000000238418579,
                 0.9599999785423279
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Worldbane",
-        "awakeIcon": "UI_EquipIcon_Bow_Worldbane_Awaken"
+        }
     },
     {
         "weaponName": "若水",
@@ -5980,9 +5720,7 @@ var zWep = [
                 0.5,
                 1.2000000476837158
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Kirin",
-        "awakeIcon": "UI_EquipIcon_Bow_Kirin_Awaken"
+        }
     },
     {
         "weaponName": "飞雷之弦振",
@@ -6045,8 +5783,6 @@ var zWep = [
                 5,
                 10
             ]
-        },
-        "icon": "UI_EquipIcon_Bow_Narukami",
-        "awakeIcon": "UI_EquipIcon_Bow_Narukami_Awaken"
-    },
+        }
+    }
 ];

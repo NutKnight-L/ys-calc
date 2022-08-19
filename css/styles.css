@@ -55,82 +55,134 @@
     /* background-color: red; */
     display: grid;
     grid-template-areas:
-        "header header header sidebar"
-        "content content content sidebar";
+        "header header icon"
+        "content sidebar icon";
     position: relative;
     margin-top: 1vh;
 }
 
 .wName {
-    width: 100%;
-    /* background-color: cadetblue; */
+    width: 50vw;
+    height: 20vw;
+    /* background-color: rgb(0, 247, 255); */
     /* text-shadow: 0 0px 3px rgb(39, 186, 196); */
+
     grid-area: header;
 }
 
 .wName span {
     width: 7em;
-    padding: .5vh;
-    /* background-color: aqua;   */
-    background-color: rgba(49, 49, 49, 0.612);
-    border-radius: .6vh;
-    box-shadow: 0 0 5px rgb(0, 0, 0);
+    height: 2.5em;
+    line-height: 2.5em;
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
     display: block;
     font-size: 22px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #fff;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    /* animation: aaa var(--animationTime_dot5s); */
-}
-
-.wType {
-    width: 100%;
-    /* background-color: aquamarine; */
-    color: rgb(255, 255, 255);
-    grid-area: content;
-}
-
-.wType span {
-    width: 5em;
-    background-color: rgba(49, 49, 49, 0.612);
-    border-radius: .6vh;
-    display: block;
-    font-size: 14px;
     font-weight: bold;
     color: #fff;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    padding: .5vh;
-    box-shadow: 0 0 5px rgb(0, 0, 0);
-    /* animation: aaa var(--animationTime_dot5s); */
+    border-radius: 5px;
+    animation: aaa var(--animationTime_dot5s);
+}
+
+.wType {
+    width: 25vw;
+    height: 20vw;
+    /* background-color: rgb(0, 255, 170); */
+    color: rgb(255, 255, 255);
+    grid-area: content;
+}
+
+.wType span {
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    background-color: rgba(0, 0, 0, .6);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    animation: aaa var(--animationTime_dot5s);
 }
 
 .wIcon {
     width: 25vw;
-    height: 25vw;
-    background-color: rgba(47, 47, 47, 0.441);
-    box-shadow: 0 0 5px rgb(0, 0, 0);
-    border-radius: 50%;
+    height: 20vw;
+    /* background-color: rgb(73, 255, 2); */
+    /* box-shadow: 0 0 5px rgb(0, 0, 0); */
     grid-area: sidebar;
-
-
 }
 
 .wIcon img {
-    width: 80%;
-    border-radius: 50%;
+    width: 15vw;
+    border-radius: 5px;
     background-color: rgb(255, 255, 255);
     position: relative;
     top: 50%;
-    box-shadow: 0 0 10px rgb(100, 100, 100);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
     left: 50%;
     transform: translate(-50%, -50%);
     animation: bbb var(--animationTime_dot3s);
+    border: 2px solid #aaa;
+}
+
+.wIcon2 {
+    width: 40vw;
+    height: 40vw;
+    grid-area: icon;
+    /* background-color: bisque; */
+}
+
+.wIcon2img {
+    width: 38vw;
+    height: 38vw;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.linearGradient1 {
+    background: linear-gradient(45deg, rgb(138, 138, 138), rgb(65, 65, 65)), rgb(160, 160, 160);
+}
+
+.linearGradient2 {
+    background: linear-gradient(45deg, rgb(125, 165, 140), rgb(125, 165, 140), rgb(114, 155, 140));
+}
+
+.linearGradient3 {
+    background: linear-gradient(45deg, rgb(148, 176, 204), rgb(118, 160, 202), rgb(84, 124, 164));
+}
+
+.linearGradient4 {
+    background: linear-gradient(45deg, rgb(129, 116, 171), rgb(125, 105, 197), rgb(135, 109, 217));
+}
+
+.linearGradient5 {
+    background: linear-gradient(45deg, rgb(211, 189, 47), rgb(255, 201, 4), rgb(235, 197, 32));
+}
+
+.wIcon2 img {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
 }
 
 .wValue {
@@ -146,7 +198,7 @@
 
 .moduleA {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, .6);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -165,7 +217,7 @@
     display: block;
     margin-left: 10px;
     margin-right: 10px;
-    /* animation: aaa var(--animationTime_dot5s); */
+    animation: aaa var(--animationTime_dot5s);
 }
 
 .wMes {
