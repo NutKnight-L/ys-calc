@@ -23,6 +23,18 @@
     position: relative;
 }
 
+
+
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width: 500px) {
     .weaponShowBox {
         width: 95vw;
@@ -144,7 +156,9 @@
         border-radius: 10px;
         position: relative;
         overflow: hidden;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .wIcon2 img {
@@ -154,6 +168,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
         filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
+    }
+
+    .wIcon2img .loading {
+        width: 16vw;
+        height: 16vw;
+        border: 5px solid #000;
+        border-top-color: #fff;
+        border-radius: 100%;
+        animation: circle infinite 0.75s linear;
+        /* background-color: #fff; */
+        position: absolute;
     }
 
     .wValue {
@@ -371,14 +396,14 @@
     }
 
     .wName {
-        width: 12vw;
+        width: 14vw;
         height: 10vh;
         /* background-color: rgb(0, 247, 255); */
         grid-area: header;
     }
 
     .wName span {
-        width: 12vw;
+        width: 14vw;
         height: 2.5em;
         line-height: 2.5em;
         background-color: rgba(0, 0, 0, .6);
@@ -396,7 +421,7 @@
     }
 
     .wType {
-        width: 6vw;
+        width: 7vw;
         height: 10vh;
         /* background-color: rgb(0, 255, 170); */
         color: rgb(255, 255, 255);
@@ -404,7 +429,7 @@
     }
 
     .wType span {
-        width: 5vw;
+        width: 7vw;
         height: 10vh;
         line-height: 10vh;
         background-color: rgba(0, 0, 0, .6);
@@ -415,8 +440,9 @@
         font-weight: bold;
         color: #fff;
         position: relative;
+        left: 50%;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
         text-align: center;
         animation: aaa var(--animationTime_dot5s);
     }
@@ -431,6 +457,7 @@
     }
 
     .wIcon img {
+        /* background-color: #fff; */
         width: 4vw;
         position: relative;
         top: 50%;
@@ -441,7 +468,7 @@
     }
 
     .wIcon2 {
-        width: 15vw;
+        width: 20vh;
         height: 20vh;
         grid-area: icon;
         /* background-color: bisque; */
@@ -449,18 +476,22 @@
 
     .wIcon2img {
         width: 90%;
-        height: 93%;
+        height: 90%;
         position: relative;
-        top: 53%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         border: 2px solid rgb(20, 20, 20);
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
         border-radius: 10px;
         position: relative;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .wIcon2 img {
+    .wIcon2Img {
         width: 100%;
         height: 100%;
         position: relative;
@@ -468,6 +499,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
         filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.7));
+    }
+
+    .wIcon2img .loading {
+        width: 5vw;
+        height: 5vw;
+        border: 5px solid #000;
+        border-top-color: #fff;
+        border-radius: 100%;
+        animation: circle infinite 0.75s linear;
+        position: absolute;
+        filter: drop-shadow(0 0 1000px #ccc);
     }
 
     .wValue {

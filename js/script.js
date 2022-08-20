@@ -3,6 +3,7 @@ var Browser = new Object();
 Browser.userAgent = window.navigator.userAgent.toLowerCase();
 Browser.ie = /msie/.test(Browser.userAgent);
 Browser.Moz = /gecko/.test(Browser.userAgent);
+let mD2 = document.getElementsByClassName('wIcon2img')[0];
 //判断是否加载完成
 function Imagess(url, callback, error) {
     var val = url;
@@ -52,10 +53,16 @@ function img_loading() {
             continue;
         }
         tt.loading = true;
-        tt.src = "http://sunbrightness.gitee.io/csdn-material/img_loading/loading.gif";
+        let loadDiv = document.createElement('div');
+        loadDiv.className = "loading";
+        mD2.appendChild(loadDiv);
+
+        // tt.src = "http://sunbrightness.gitee.io/csdn-material/img_loading/loading.gif";
         Imagess(tt.getAttribute("src-data"), function (obj) {
             tt.src = obj.src;
             tt.removeAttribute("src-data");
+            tt.className = "wIcon2Img";
+            mD2.getElementsByTagName('div')[0].remove();
         });
 
     }
@@ -70,7 +77,7 @@ window.onload = function () {
     let mA = document.getElementsByClassName('moduleA');
     let mC = document.getElementsByClassName('wType');
     let mD = document.getElementsByClassName('wIcon');
-    let mD2 = document.getElementsByClassName('wIcon2img')[0];
+
     let mE = document.getElementsByClassName('moduleE');
     let wepSiftChoose = document.getElementsByClassName('wepSiftChoose');
     let listChoose = document.getElementsByClassName('listChoose')[0].getElementsByTagName('div');
